@@ -16,5 +16,120 @@
       "code": "RAA-2024-003"
     }
   ],
-  "chats": []
+  "chats": [
+    {
+      "id": "1",
+      "date": "2024-01-15T10:00:00Z",
+      "participants": ["Alice", "Bob"],
+      "title": "Supply Chain Chat",
+      "messages": [
+        {
+          "id": "1",
+          "sender": "Alice",
+          "timestamp": "2024-01-15T10:05:00Z",
+          "content": "Let's discuss the supply chain issues."
+        },
+        {
+          "id": "2",
+          "sender": "Bob",
+          "timestamp": "2024-01-15T10:06:00Z",
+          "content": "Sure, I have some data to share."
+        },
+        {
+          "id": "3",
+          "sender": "Alice",
+          "timestamp": "2024-01-15T10:07:00Z",
+          "content": "Great, please send it over."
+        },
+        {
+          "id": "4",
+          "sender": "Bob",
+          "timestamp": "2024-01-15T10:08:00Z",
+          "content": "Here it is. Let's analyze it together."
+        },
+        {
+          "id": "5",
+          "sender": "Alice",
+          "timestamp": "2024-01-15T10:09:00Z",
+          "content": "Thanks! I'll review it and get back to you."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "date": "2024-01-16T11:00:00Z",
+      "participants": ["Charlie", "Dave"],
+      "title": "Market Demand Discussion",
+      "messages": [
+        {
+          "id": "6",
+          "sender": "Charlie",
+          "timestamp": "2024-01-16T11:05:00Z",
+          "content": "What are the latest trends in market demand?"
+        },
+        {
+          "id": "7",
+          "sender": "Dave",
+          "timestamp": "2024-01-16T11:06:00Z",
+          "content": "I have some insights from the recent survey."
+        },
+        {
+          "id": "8",
+          "sender": "Charlie",
+          "timestamp": "2024-01-16T11:07:00Z",
+          "content": "Please share the details."
+        },
+        {
+          "id": "9",
+          "sender": "Dave",
+          "timestamp": "2024-01-16T11:08:00Z",
+          "content": "Here they are. Let's analyze them."
+        },
+        {
+          "id": "10",
+          "sender": "Charlie",
+          "timestamp": "2024-01-16T11:09:00Z",
+          "content": "Thanks! I'll look into it."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "date": "2024-01-17T12:00:00Z",
+      "participants": ["Eve", "Frank"],
+      "title": "Risk Assessment Meeting",
+      "messages": [
+        {
+          "id": "11",
+          "sender": "Eve",
+          "timestamp": "2024-01-17T12:05:00Z",
+          "content": "We need to evaluate the risks for the upcoming project."
+        },
+        {
+          "id": "12",
+          "sender": "Frank",
+          "timestamp": "2024-01-17T12:06:00Z",
+          "content": "I have some data from the last assessment."
+        },
+        {
+          "id": "13",
+          "sender": "Eve",
+          "timestamp": "2024-01-17T12:07:00Z",
+          "content": "Please share it with the team."
+        },
+        {
+          "id": "14",
+          "sender": "Frank",
+          "timestamp": "2024-01-17T12:08:00Z",
+          "content": "Here it is. Let's discuss the findings."
+        },
+        {
+          "id": "15",
+          "sender": "Eve",
+          "timestamp": "2024-01-17T12:09:00Z",
+          "content": "Thanks! I'll review it before the meeting."
+        }
+      ]
+    }
+  ]
 }
