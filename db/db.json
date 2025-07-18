@@ -16,6 +16,29 @@
       "code": "RAA-2024-003"
     }
   ],
+  "definitions": [
+    {
+      "id": "1",
+      "name": "Supply Chain Analysis",
+      "description": "Analysis of supply chain processes and performance."
+    },
+    {
+      "id": "2",
+      "name": "Market Demand Forecast",
+      "description": "Forecasting market demand for products and services."
+    },
+    {
+      "id": "3",
+      "name": "Risk Assessment",
+      "description": "Assessment of risks associated with business operations.",
+      "details": [
+        "Qualitative and quantitative risk assessment techniques.",
+        "Risk Management Team",
+        "Project Managers",
+        "frequency"
+      ]
+    }
+  ],
   "chats": [
     {
       "id": "1",
