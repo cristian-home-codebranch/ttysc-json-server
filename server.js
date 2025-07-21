@@ -206,52 +206,56 @@ server.use((req, res, next) => {
 // Rutas personalizadas avanzadas
 server.get("/cases", (req, res) => {
   const db = router.db;
-  let cases = db.get("cases").value();
-
-  // Aplicar filtros
+  const cases = db.get("cases").value();
+  const { analysis = [], filters = {} } = cases;
   const { analysisNameType, search, _sort, _order } = req.query;
 
-  if (analysisNameType || search) {
-    const filteredCases = {
-      ...cases,
-      analysis: cases.analysis.filter((item) => {
-        let matches = true;
+  let filteredAnalysis = analysis;
+  let organizations = [];
+  let CM = [];
+  let SKU = [];
+  let NVPN = [];
 
-        if (analysisNameType) {
-          matches =
-            matches &&
-            (item.name.toLowerCase().includes(analysisNameType.toLowerCase()) ||
-              item.code.toLowerCase().includes(analysisNameType.toLowerCase()));
-        }
-
-        if (search) {
-          matches =
-            matches &&
-            (item.name.toLowerCase().includes(search.toLowerCase()) ||
-              item.code.toLowerCase().includes(search.toLowerCase()) ||
-              item.description.toLowerCase().includes(search.toLowerCase()));
-        }
-
-        return matches;
-      }),
-    };
-
-    // Aplicar ordenación si se especifica
-    if (_sort && filteredCases.analysis) {
-      const sortField = _sort;
-      const sortOrder = _order === "desc" ? -1 : 1;
-
-      filteredCases.analysis.sort((a, b) => {
-        if (a[sortField] < b[sortField]) return -1 * sortOrder;
-        if (a[sortField] > b[sortField]) return 1 * sortOrder;
-        return 0;
-      });
+  if (analysisNameType) {
+    // Filtrar por key exacto (case-insensitive)
+    filteredAnalysis = analysis.filter(item => item.key && item.key.toLowerCase() === analysisNameType.toLowerCase());
+    // Si existe filters para esa key, extraer los datos
+    const filterData = filters[analysisNameType] || filters[analysisNameType.toUpperCase()] || filters[analysisNameType.toLowerCase()];
+    if (filterData) {
+      organizations = filterData.organizations || [];
+      CM = filterData.CM || [];
+      SKU = filterData.SKU || [];
+      NVPN = filterData.NVPN || [];
     }
-
-    res.json(filteredCases);
-  } else {
-    res.json(cases);
+  } else if (search) {
+    const s = search.toLowerCase();
+    filteredAnalysis = analysis.filter(item =>
+      (item.name && item.name.toLowerCase().includes(s)) ||
+      (item.key && item.key.toLowerCase().includes(s))
+    );
   }
+
+  // Ordenar si corresponde
+  let sortedAnalysis = filteredAnalysis;
+  if (_sort && sortedAnalysis) {
+    const sortField = _sort;
+    const sortOrder = _order === "desc" ? -1 : 1;
+    sortedAnalysis = [...sortedAnalysis].sort((a, b) => {
+      if (a[sortField] < b[sortField]) return -1 * sortOrder;
+      if (a[sortField] > b[sortField]) return 1 * sortOrder;
+      return 0;
+    });
+  }
+
+  const response = {
+    analysis: sortedAnalysis,
+    organizations,
+    CM,
+    SKU,
+    NVPN,
+  };
+
+  res.json(response);
 });
 
 // Endpoint para análisis con paginación completa
@@ -316,7 +320,7 @@ server.get("/cases/analysis", (req, res) => {
     analysis = analysis.slice(startIndex, endIndex);
   }
 
-  res.json(analysis);
+  res.json({analysis});
 });
 
 // Endpoint para feedback con filtros avanzados

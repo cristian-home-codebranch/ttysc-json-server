@@ -166,26 +166,22 @@
       {
         "id": "1",
         "name": "Supply Chain Optimization",
-        "code": "SCO-2024",
-        "description": "Comprehensive supply chain analysis and optimization recommendations"
+        "key": "SCO-2024"
       },
       {
         "id": "2",
         "name": "Market Penetration Analysis",
-        "code": "MPA-2024",
-        "description": "Market penetration strategies and competitive analysis"
+        "key": "MPA-2024"
       },
       {
         "id": "3",
         "name": "Risk Mitigation Strategy",
-        "code": "RMS-2024",
-        "description": "Enterprise risk assessment and mitigation planning"
+        "key": "RMS-2024"
       },
       {
         "id": "4",
         "name": "Financial Performance Review",
-        "code": "FPR-2024",
-        "description": "Quarterly financial performance analysis and forecasting"
+        "key": "FPR-2024"
       }
     ],
     "filters": {
@@ -195,17 +191,17 @@
           { "key": "org2", "name": "Supply Chain Partners LLC" },
           { "key": "org3", "name": "Global Logistics Inc" }
         ],
-        "cms": [
+        "CM": [
           { "key": "cm1", "name": "Central Management System" },
           { "key": "cm2", "name": "Regional Management Hub" },
           { "key": "cm3", "name": "Local Operations Center" }
         ],
-        "skus": [
+        "SKU": [
           { "key": "sku1", "name": "RTX-4090-24GB" },
           { "key": "sku2", "name": "RTX-4080-16GB" },
           { "key": "sku3", "name": "RTX-4070-12GB" }
         ],
-        "nvpns": [
+        "NVPN": [
           { "key": "nvpn1", "name": "900-2G414-0000-000" },
           { "key": "nvpn2", "name": "900-2G415-0000-000" },
           { "key": "nvpn3", "name": "900-2G416-0000-000" }
@@ -213,20 +209,56 @@
       },
       "MPA-2024": {
         "organizations": [
-          { "key": "org1", "name": "NVIDIA Corporation" },
-          { "key": "org4", "name": "Market Research Partners" }
+          { "key": "org4", "name": "Market Research Partners" },
+          { "key": "org7", "name": "Consumer Insights Group" }
         ],
-        "cms": [
-          { "key": "cm1", "name": "Central Management System" },
-          { "key": "cm4", "name": "Market Analytics Center" }
+        "CM": [
+          { "key": "cm4", "name": "Market Analytics Center" },
+          { "key": "cm7", "name": "Consumer Data Lab" }
         ],
-        "skus": [
-          { "key": "sku1", "name": "RTX-4090-24GB" },
-          { "key": "sku4", "name": "GTX-1660-6GB" }
+        "SKU": [
+          { "key": "sku4", "name": "GTX-1660-6GB" },
+          { "key": "sku7", "name": "RTX-3060-12GB" }
         ],
-        "nvpns": [
-          { "key": "nvpn1", "name": "900-2G414-0000-000" },
-          { "key": "nvpn4", "name": "900-2G417-0000-000" }
+        "NVPN": [
+          { "key": "nvpn4", "name": "900-2G417-0000-000" },
+          { "key": "nvpn7", "name": "900-2G420-0000-000" }
+        ]
+      },
+      "RMS-2024": {
+        "organizations": [
+          { "key": "org5", "name": "Risk Management Partners" },
+          { "key": "org8", "name": "Compliance Solutions Ltd" }
+        ],
+        "CM": [
+          { "key": "cm5", "name": "Risk Assessment Center" },
+          { "key": "cm8", "name": "Compliance Operations Hub" }
+        ],
+        "SKU": [
+          { "key": "sku5", "name": "RTX-4080-16GB" },
+          { "key": "sku8", "name": "Quadro-RTX-8000" }
+        ],
+        "NVPN": [
+          { "key": "nvpn5", "name": "900-2G418-0000-000" },
+          { "key": "nvpn8", "name": "900-2G421-0000-000" }
+        ]
+      },
+      "FPR-2024": {
+        "organizations": [
+          { "key": "org6", "name": "Financial Performance Partners" },
+          { "key": "org9", "name": "Profitability Analytics Inc" }
+        ],
+        "CM": [
+          { "key": "cm6", "name": "Financial Performance Center" },
+          { "key": "cm9", "name": "ROI Analysis Group" }
+        ],
+        "SKU": [
+          { "key": "sku6", "name": "RTX-4070-12GB" },
+          { "key": "sku9", "name": "Tesla-V100-32GB" }
+        ],
+        "NVPN": [
+          { "key": "nvpn6", "name": "900-2G419-0000-000" },
+          { "key": "nvpn9", "name": "900-2G422-0000-000" }
         ]
       }
     }
