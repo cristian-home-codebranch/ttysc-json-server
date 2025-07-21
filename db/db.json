@@ -187,78 +187,186 @@
     "filters": {
       "SCO-2024": {
         "organizations": [
-          { "key": "org1", "name": "NVIDIA Corporation" },
-          { "key": "org2", "name": "Supply Chain Partners LLC" },
-          { "key": "org3", "name": "Global Logistics Inc" }
+          {
+            "key": "org1",
+            "name": "NVIDIA Corporation"
+          },
+          {
+            "key": "org2",
+            "name": "Supply Chain Partners LLC"
+          },
+          {
+            "key": "org3",
+            "name": "Global Logistics Inc"
+          }
         ],
         "CM": [
-          { "key": "cm1", "name": "Central Management System" },
-          { "key": "cm2", "name": "Regional Management Hub" },
-          { "key": "cm3", "name": "Local Operations Center" }
+          {
+            "key": "cm1",
+            "name": "Central Management System"
+          },
+          {
+            "key": "cm2",
+            "name": "Regional Management Hub"
+          },
+          {
+            "key": "cm3",
+            "name": "Local Operations Center"
+          }
         ],
         "SKU": [
-          { "key": "sku1", "name": "RTX-4090-24GB" },
-          { "key": "sku2", "name": "RTX-4080-16GB" },
-          { "key": "sku3", "name": "RTX-4070-12GB" }
+          {
+            "key": "sku1",
+            "name": "RTX-4090-24GB"
+          },
+          {
+            "key": "sku2",
+            "name": "RTX-4080-16GB"
+          },
+          {
+            "key": "sku3",
+            "name": "RTX-4070-12GB"
+          }
         ],
         "NVPN": [
-          { "key": "nvpn1", "name": "900-2G414-0000-000" },
-          { "key": "nvpn2", "name": "900-2G415-0000-000" },
-          { "key": "nvpn3", "name": "900-2G416-0000-000" }
+          {
+            "key": "nvpn1",
+            "name": "900-2G414-0000-000"
+          },
+          {
+            "key": "nvpn2",
+            "name": "900-2G415-0000-000"
+          },
+          {
+            "key": "nvpn3",
+            "name": "900-2G416-0000-000"
+          }
         ]
       },
       "MPA-2024": {
         "organizations": [
-          { "key": "org4", "name": "Market Research Partners" },
-          { "key": "org7", "name": "Consumer Insights Group" }
+          {
+            "key": "org4",
+            "name": "Market Research Partners"
+          },
+          {
+            "key": "org7",
+            "name": "Consumer Insights Group"
+          }
         ],
         "CM": [
-          { "key": "cm4", "name": "Market Analytics Center" },
-          { "key": "cm7", "name": "Consumer Data Lab" }
+          {
+            "key": "cm4",
+            "name": "Market Analytics Center"
+          },
+          {
+            "key": "cm7",
+            "name": "Consumer Data Lab"
+          }
         ],
         "SKU": [
-          { "key": "sku4", "name": "GTX-1660-6GB" },
-          { "key": "sku7", "name": "RTX-3060-12GB" }
+          {
+            "key": "sku4",
+            "name": "GTX-1660-6GB"
+          },
+          {
+            "key": "sku7",
+            "name": "RTX-3060-12GB"
+          }
         ],
         "NVPN": [
-          { "key": "nvpn4", "name": "900-2G417-0000-000" },
-          { "key": "nvpn7", "name": "900-2G420-0000-000" }
+          {
+            "key": "nvpn4",
+            "name": "900-2G417-0000-000"
+          },
+          {
+            "key": "nvpn7",
+            "name": "900-2G420-0000-000"
+          }
         ]
       },
       "RMS-2024": {
         "organizations": [
-          { "key": "org5", "name": "Risk Management Partners" },
-          { "key": "org8", "name": "Compliance Solutions Ltd" }
+          {
+            "key": "org5",
+            "name": "Risk Management Partners"
+          },
+          {
+            "key": "org8",
+            "name": "Compliance Solutions Ltd"
+          }
         ],
         "CM": [
-          { "key": "cm5", "name": "Risk Assessment Center" },
-          { "key": "cm8", "name": "Compliance Operations Hub" }
+          {
+            "key": "cm5",
+            "name": "Risk Assessment Center"
+          },
+          {
+            "key": "cm8",
+            "name": "Compliance Operations Hub"
+          }
         ],
         "SKU": [
-          { "key": "sku5", "name": "RTX-4080-16GB" },
-          { "key": "sku8", "name": "Quadro-RTX-8000" }
+          {
+            "key": "sku5",
+            "name": "RTX-4080-16GB"
+          },
+          {
+            "key": "sku8",
+            "name": "Quadro-RTX-8000"
+          }
         ],
         "NVPN": [
-          { "key": "nvpn5", "name": "900-2G418-0000-000" },
-          { "key": "nvpn8", "name": "900-2G421-0000-000" }
+          {
+            "key": "nvpn5",
+            "name": "900-2G418-0000-000"
+          },
+          {
+            "key": "nvpn8",
+            "name": "900-2G421-0000-000"
+          }
         ]
       },
       "FPR-2024": {
         "organizations": [
-          { "key": "org6", "name": "Financial Performance Partners" },
-          { "key": "org9", "name": "Profitability Analytics Inc" }
+          {
+            "key": "org6",
+            "name": "Financial Performance Partners"
+          },
+          {
+            "key": "org9",
+            "name": "Profitability Analytics Inc"
+          }
         ],
         "CM": [
-          { "key": "cm6", "name": "Financial Performance Center" },
-          { "key": "cm9", "name": "ROI Analysis Group" }
+          {
+            "key": "cm6",
+            "name": "Financial Performance Center"
+          },
+          {
+            "key": "cm9",
+            "name": "ROI Analysis Group"
+          }
         ],
         "SKU": [
-          { "key": "sku6", "name": "RTX-4070-12GB" },
-          { "key": "sku9", "name": "Tesla-V100-32GB" }
+          {
+            "key": "sku6",
+            "name": "RTX-4070-12GB"
+          },
+          {
+            "key": "sku9",
+            "name": "Tesla-V100-32GB"
+          }
         ],
         "NVPN": [
-          { "key": "nvpn6", "name": "900-2G419-0000-000" },
-          { "key": "nvpn9", "name": "900-2G422-0000-000" }
+          {
+            "key": "nvpn6",
+            "name": "900-2G419-0000-000"
+          },
+          {
+            "key": "nvpn9",
+            "name": "900-2G422-0000-000"
+          }
         ]
       }
     }
@@ -266,6 +374,7 @@
   "chat": [
     {
       "id": "1",
+      "name": "Supply Chat",
       "userId": "user123",
       "sessionId": "session_001",
       "timestamp": "2024-01-15T10:00:00Z",
@@ -303,7 +412,8 @@
           "organization": "org1",
           "timeframe": "Q1-2024"
         }
-      }
+      },
+      "updatedAt": "2025-07-21T16:15:28.595Z"
     },
     {
       "id": "2",
@@ -340,10 +450,26 @@
       "id": "table_001",
       "title": "Supply Chain Performance Metrics",
       "columns": [
-        { "key": "supplier", "label": "Supplier", "type": "string" },
-        { "key": "leadTime", "label": "Lead Time (days)", "type": "number" },
-        { "key": "qualityScore", "label": "Quality Score", "type": "number" },
-        { "key": "cost", "label": "Cost ($)", "type": "currency" }
+        {
+          "key": "supplier",
+          "label": "Supplier",
+          "type": "string"
+        },
+        {
+          "key": "leadTime",
+          "label": "Lead Time (days)",
+          "type": "number"
+        },
+        {
+          "key": "qualityScore",
+          "label": "Quality Score",
+          "type": "number"
+        },
+        {
+          "key": "cost",
+          "label": "Cost ($)",
+          "type": "currency"
+        }
       ],
       "rows": [
         {
