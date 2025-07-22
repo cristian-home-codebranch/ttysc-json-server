@@ -189,6 +189,119 @@ const getTotalCountFromDatabase = (req, fallbackCount) => {
   return fallbackCount;
 };
 
+// Función auxiliar para aplicar filtros de JSON Server a datos personalizados
+const applyJsonServerFilters = (data, query) => {
+  let filtered = [...data];
+
+  // Aplicar filtros de campo exacto
+  Object.keys(query).forEach((key) => {
+    if (
+      !key.startsWith("_") &&
+      key !== "q" &&
+      key !== "dateFrom" &&
+      key !== "dateTo"
+    ) {
+      const value = query[key];
+
+      // Operadores de rango
+      if (key.endsWith("_gte")) {
+        const field = key.replace("_gte", "");
+        filtered = filtered.filter((item) => {
+          const itemValue = parseFloat(item[field]) || item[field];
+          const queryValue = parseFloat(value) || value;
+          return itemValue >= queryValue;
+        });
+      } else if (key.endsWith("_lte")) {
+        const field = key.replace("_lte", "");
+        filtered = filtered.filter((item) => {
+          const itemValue = parseFloat(item[field]) || item[field];
+          const queryValue = parseFloat(value) || value;
+          return itemValue <= queryValue;
+        });
+      } else if (key.endsWith("_ne")) {
+        const field = key.replace("_ne", "");
+        filtered = filtered.filter((item) => item[field] != value);
+      } else if (key.endsWith("_like")) {
+        const field = key.replace("_like", "");
+        filtered = filtered.filter((item) =>
+          item[field]?.toString().toLowerCase().includes(value.toLowerCase())
+        );
+      } else {
+        // Filtro exacto
+        filtered = filtered.filter((item) => item[key] == value);
+      }
+    }
+  });
+
+  // Búsqueda full-text con 'q'
+  if (query.q) {
+    const searchTerm = query.q.toLowerCase();
+    filtered = filtered.filter((item) =>
+      Object.values(item).some((value) =>
+        value?.toString().toLowerCase().includes(searchTerm)
+      )
+    );
+  }
+
+  return filtered;
+};
+
+// Función auxiliar para aplicar ordenación
+const applySorting = (data, query) => {
+  if (!query._sort) return data;
+
+  const sortFields = query._sort.split(",");
+  const sortOrders = query._order ? query._order.split(",") : [];
+
+  return data.sort((a, b) => {
+    for (let i = 0; i < sortFields.length; i++) {
+      const field = sortFields[i];
+      const order = sortOrders[i] === "desc" ? -1 : 1;
+
+      let aVal = a[field];
+      let bVal = b[field];
+
+      // Manejar fechas
+      if (
+        field === "timestamp" ||
+        field.includes("date") ||
+        field.includes("Date")
+      ) {
+        aVal = new Date(aVal);
+        bVal = new Date(bVal);
+      }
+
+      // Manejar números
+      if (!isNaN(aVal) && !isNaN(bVal)) {
+        aVal = parseFloat(aVal);
+        bVal = parseFloat(bVal);
+      }
+
+      if (aVal < bVal) return -1 * order;
+      if (aVal > bVal) return 1 * order;
+    }
+    return 0;
+  });
+};
+
+// Función auxiliar para aplicar paginación
+const applyPagination = (data, query, res) => {
+  if (!query._page && !query._limit) return data;
+
+  const page = parseInt(query._page) || 1;
+  const limit = parseInt(query._limit) || 10;
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + limit;
+
+  // Agregar headers de paginación
+  res.header("X-Total-Count", data.length);
+  res.header("X-Total-Pages", Math.ceil(data.length / limit));
+  res.header("X-Current-Page", page);
+  res.header("X-Per-Page", limit);
+
+  return data.slice(startIndex, endIndex);
+};
+
 // Usar middlewares por defecto
 server.use(middlewares);
 
@@ -203,118 +316,30 @@ server.use((req, res, next) => {
   next();
 });
 
-// Rutas personalizadas avanzadas
+// Rutas personalizadas estandarizadas
 server.get("/cases", (req, res) => {
   const db = router.db;
   let cases = db.get("cases").value();
 
-  // Aplicar filtros
-  const { analysisNameType, search, _sort, _order } = req.query;
-
-  if (analysisNameType || search) {
-    const filteredCases = {
-      ...cases,
-      analysis: cases.analysis.filter((item) => {
-        let matches = true;
-
-        if (analysisNameType) {
-          matches =
-            matches &&
-            (item.name.toLowerCase().includes(analysisNameType.toLowerCase()) ||
-              item.code.toLowerCase().includes(analysisNameType.toLowerCase()));
-        }
-
-        if (search) {
-          matches =
-            matches &&
-            (item.name.toLowerCase().includes(search.toLowerCase()) ||
-              item.code.toLowerCase().includes(search.toLowerCase()) ||
-              item.description.toLowerCase().includes(search.toLowerCase()));
-        }
-
-        return matches;
-      }),
-    };
-
-    // Aplicar ordenación si se especifica
-    if (_sort && filteredCases.analysis) {
-      const sortField = _sort;
-      const sortOrder = _order === "desc" ? -1 : 1;
-
-      filteredCases.analysis.sort((a, b) => {
-        if (a[sortField] < b[sortField]) return -1 * sortOrder;
-        if (a[sortField] > b[sortField]) return 1 * sortOrder;
-        return 0;
-      });
-    }
-
-    res.json(filteredCases);
-  } else {
-    res.json(cases);
+  // Aplicar filtros estándar de JSON Server solo si hay análisis
+  if (cases.analysis) {
+    cases.analysis = applyJsonServerFilters(cases.analysis, req.query);
+    cases.analysis = applySorting(cases.analysis, req.query);
+    cases.analysis = applyPagination(cases.analysis, req.query, res);
   }
+
+  res.json(cases);
 });
 
-// Endpoint para análisis con paginación completa
+// Endpoint para análisis con funcionalidad completa de JSON Server
 server.get("/cases/analysis", (req, res) => {
   const db = router.db;
   let analysis = db.get("cases.analysis").value();
 
-  // Aplicar filtros de búsqueda
-  const { search, name, code, _sort, _order, _page, _limit } = req.query;
-
-  if (search || name || code) {
-    analysis = analysis.filter((item) => {
-      let matches = true;
-
-      if (search) {
-        matches =
-          matches &&
-          (item.name.toLowerCase().includes(search.toLowerCase()) ||
-            item.code.toLowerCase().includes(search.toLowerCase()) ||
-            item.description.toLowerCase().includes(search.toLowerCase()));
-      }
-
-      if (name) {
-        matches =
-          matches && item.name.toLowerCase().includes(name.toLowerCase());
-      }
-
-      if (code) {
-        matches =
-          matches && item.code.toLowerCase().includes(code.toLowerCase());
-      }
-
-      return matches;
-    });
-  }
-
-  // Aplicar ordenación
-  if (_sort) {
-    const sortField = _sort;
-    const sortOrder = _order === "desc" ? -1 : 1;
-
-    analysis.sort((a, b) => {
-      if (a[sortField] < b[sortField]) return -1 * sortOrder;
-      if (a[sortField] > b[sortField]) return 1 * sortOrder;
-      return 0;
-    });
-  }
-
-  // Aplicar paginación manual
-  if (_page || _limit) {
-    const page = parseInt(_page) || 1;
-    const limit = parseInt(_limit) || 10;
-    const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
-
-    // Agregar headers de paginación
-    res.header("X-Total-Count", analysis.length);
-    res.header("X-Total-Pages", Math.ceil(analysis.length / limit));
-    res.header("X-Current-Page", page);
-    res.header("X-Per-Page", limit);
-
-    analysis = analysis.slice(startIndex, endIndex);
-  }
+  // Aplicar todos los filtros estándar de JSON Server
+  analysis = applyJsonServerFilters(analysis, req.query);
+  analysis = applySorting(analysis, req.query);
+  analysis = applyPagination(analysis, req.query, res);
 
   res.json(analysis);
 });
@@ -324,32 +349,12 @@ server.get("/feedback", (req, res) => {
   const db = router.db;
   let feedback = db.get("feedback").value();
 
-  const {
-    status,
-    category,
-    userId,
-    search,
-    dateFrom,
-    dateTo,
-    _sort,
-    _order,
-    _page,
-    _limit,
-  } = req.query;
+  // Aplicar filtros de fecha personalizados (mantener funcionalidad específica)
+  const { dateFrom, dateTo } = req.query;
 
-  // Aplicar filtros
-  if (status || category || userId || search || dateFrom || dateTo) {
+  if (dateFrom || dateTo) {
     feedback = feedback.filter((item) => {
       let matches = true;
-
-      if (status) matches = matches && item.status === status;
-      if (category) matches = matches && item.category === category;
-      if (userId) matches = matches && item.userId === userId;
-
-      if (search) {
-        matches =
-          matches && item.message.toLowerCase().includes(search.toLowerCase());
-      }
 
       if (dateFrom) {
         matches = matches && new Date(item.timestamp) >= new Date(dateFrom);
@@ -363,36 +368,10 @@ server.get("/feedback", (req, res) => {
     });
   }
 
-  // Aplicar ordenación
-  if (_sort) {
-    const sortField = _sort;
-    const sortOrder = _order === "desc" ? -1 : 1;
-
-    feedback.sort((a, b) => {
-      if (sortField === "timestamp") {
-        return (new Date(a[sortField]) - new Date(b[sortField])) * sortOrder;
-      }
-
-      if (a[sortField] < b[sortField]) return -1 * sortOrder;
-      if (a[sortField] > b[sortField]) return 1 * sortOrder;
-      return 0;
-    });
-  }
-
-  // Aplicar paginación
-  if (_page || _limit) {
-    const page = parseInt(_page) || 1;
-    const limit = parseInt(_limit) || 10;
-    const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
-
-    res.header("X-Total-Count", feedback.length);
-    res.header("X-Total-Pages", Math.ceil(feedback.length / limit));
-    res.header("X-Current-Page", page);
-    res.header("X-Per-Page", limit);
-
-    feedback = feedback.slice(startIndex, endIndex);
-  }
+  // Aplicar filtros estándar de JSON Server
+  feedback = applyJsonServerFilters(feedback, req.query);
+  feedback = applySorting(feedback, req.query);
+  feedback = applyPagination(feedback, req.query, res);
 
   res.json(feedback);
 });
@@ -407,38 +386,46 @@ server.listen(PORT, "0.0.0.0", () => {
 
   console.log("\n🔍 Cases endpoints:");
   console.log("  GET /cases");
-  console.log("  GET /cases?analysisNameType=Supply");
-  console.log("  GET /cases?search=optimization");
+  console.log("  GET /cases?q=optimization");
   console.log("  GET /cases?_sort=name&_order=desc");
 
   console.log("\n📊 Analysis endpoints:");
   console.log("  GET /cases/analysis");
   console.log("  GET /cases/analysis?_page=1&_limit=2");
-  console.log("  GET /cases/analysis?search=supply&_sort=name");
+  console.log("  GET /cases/analysis?q=supply&_sort=name");
   console.log("  GET /cases/analysis?name=Supply&code=SCO");
+  console.log("  GET /cases/analysis?id_gte=2&name_like=Supply");
 
   console.log("\n💬 Feedback endpoints:");
   console.log("  GET /feedback");
   console.log("  GET /feedback?status=open");
   console.log("  GET /feedback?category=feature_request");
   console.log("  GET /feedback?_page=1&_limit=2&_sort=timestamp&_order=desc");
-  console.log("  GET /feedback?search=supply&status=open");
+  console.log("  GET /feedback?q=supply&status=open");
   console.log("  GET /feedback?dateFrom=2024-01-16&dateTo=2024-01-17");
+  console.log("  GET /feedback?message_like=helpful&userId_ne=user456");
 
-  console.log("\n📋 Other endpoints:");
+  console.log("\n📋 Native endpoints:");
   console.log("  GET /definitions");
   console.log("  GET /definitions?_page=1&_limit=2");
-  console.log("  GET /definitions?category=Supply Chain");
+  console.log("  GET /definitions?category=Supply%20Chain");
   console.log("  GET /definitions?q=optimization");
+  console.log("  GET /definitions?id_gte=2&name_like=Supply");
   console.log("  GET /settings");
+  console.log("  GET /settings?shareChats=true");
   console.log("  GET /chat");
   console.log("  GET /options/tables");
 
-  console.log("\n🔧 Query Parameters:");
-  console.log("  _page=1        - Página número");
-  console.log("  _limit=10      - Elementos por página");
-  console.log("  _sort=field    - Campo para ordenar");
-  console.log("  _order=asc|desc- Orden ascendente o descendente");
-  console.log("  q=text         - Búsqueda full-text (solo rutas nativas)");
-  console.log("  search=text    - Búsqueda personalizada");
+  console.log("\n🔧 Standardized Query Parameters:");
+  console.log("  _page=1           - Página número");
+  console.log("  _limit=10         - Elementos por página");
+  console.log("  _sort=field       - Campo para ordenar");
+  console.log("  _order=asc|desc   - Orden ascendente o descendente");
+  console.log("  q=text            - Búsqueda full-text (todas las rutas)");
+  console.log("  field=value       - Filtro exacto por campo");
+  console.log("  field_gte=value   - Mayor o igual que");
+  console.log("  field_lte=value   - Menor o igual que");
+  console.log("  field_ne=value    - No igual");
+  console.log("  field_like=text   - Contiene texto");
+  console.log("  dateFrom/dateTo   - Filtros de fecha (solo /feedback)");
 });

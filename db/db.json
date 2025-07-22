@@ -1,22 +1,11 @@
 {
-  "settings": [
-    {
-      "id": "1",
-      "userId": "user123",
-      "shareChats": true,
-      "hideIndexTable": false,
-      "createdAt": "2024-01-15T10:00:00Z",
-      "updatedAt": "2024-01-15T10:00:00Z"
-    },
-    {
-      "id": "2",
-      "userId": "user456",
-      "shareChats": false,
-      "hideIndexTable": true,
-      "createdAt": "2024-01-16T11:00:00Z",
-      "updatedAt": "2024-01-16T11:00:00Z"
-    }
-  ],
+  "settings": {
+    "userId": "user123",
+    "shareChats": true,
+    "hideIndexTable": false,
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2024-01-15T10:00:00Z"
+  },
   "definitions": [
     {
       "id": "1",
@@ -231,7 +220,7 @@
       }
     }
   },
-  "chat": [
+  "chats": [
     {
       "id": "1",
       "userId": "user123",

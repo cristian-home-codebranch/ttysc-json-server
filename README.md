@@ -1,14 +1,10 @@
-# TTYSC Backend API
+# TTYSC Backend API (mock server)
 
 ## General Information
 
 **TTYSC Backend API v1.0.0**
 
 This is a simple API for TTYSC Backend
-
-### Contact
-
-- Email: @mojarocriau@nvidia.com
 
 ### License
 
@@ -36,6 +32,52 @@ To authenticate requests, include the token in JWT format prefixed with `Bearer`
 GET: example
 Host: example.cse
 Authorization: Bearer dWd:jE6c6Fx36vcmb#fM=
+```
+
+## 🔧 Standardized Query Parameters
+
+All endpoints now support the same query parameters for consistent behavior:
+
+### Pagination
+
+- `_page=1` - Page number (default: 1)
+- `_limit=10` - Items per page (default: 10)
+
+### Sorting
+
+- `_sort=field` - Field to sort by
+- `_order=asc|desc` - Sort order (default: asc)
+
+### Search
+
+- `q=text` - Full-text search across all fields
+- `search=text` - Custom search (legacy compatibility)
+
+### Field Filtering
+
+- `field=value` - Exact match filter
+- `field_gte=value` - Greater than or equal
+- `field_lte=value` - Less than or equal
+- `field_ne=value` - Not equal
+- `field_like=text` - Contains text (case insensitive)
+
+### Response Format
+
+All GET requests return a standardized response format:
+
+```json
+{
+  "success": true,
+  "data": [...],
+  "pagination": {
+    "totalCount": 10,
+    "totalPages": 3,
+    "currentPage": 1,
+    "perPage": 5,
+    "hasNextPage": true,
+    "hasPrevPage": false
+  }
+}
 ```
 
 ## Operations
