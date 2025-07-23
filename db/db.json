@@ -12,28 +12,46 @@
       "name": "Supply Chain Optimization",
       "description": "Comprehensive analysis of supply chain processes, bottlenecks, and optimization opportunities.",
       "category": "Supply Chain",
-      "tags": ["logistics", "optimization", "efficiency"]
+      "tags": [
+        "logistics",
+        "optimization",
+        "efficiency"
+      ]
     },
     {
       "id": "2",
       "name": "Market Demand Forecast",
       "description": "Statistical and AI-driven forecasting of market demand patterns for strategic planning.",
       "category": "Market Analysis",
-      "tags": ["forecasting", "demand", "market trends"]
+      "tags": [
+        "forecasting",
+        "demand",
+        "market trends"
+      ]
     },
     {
       "id": "3",
       "name": "Risk Assessment Matrix",
       "description": "Quantitative and qualitative risk analysis framework for business decision making.",
       "category": "Risk Management",
-      "tags": ["risk", "assessment", "mitigation", "compliance"]
+      "tags": [
+        "risk",
+        "assessment",
+        "mitigation",
+        "compliance"
+      ]
     },
     {
       "id": "4",
       "name": "Financial Impact Analysis",
       "description": "Analysis of financial implications and ROI for strategic initiatives.",
       "category": "Finance",
-      "tags": ["finance", "ROI", "impact", "profitability"]
+      "tags": [
+        "finance",
+        "ROI",
+        "impact",
+        "profitability"
+      ]
     }
   ],
   "feedback": [
@@ -111,7 +129,13 @@
         "name": "financial_metrics",
         "displayName": "Financial Metrics",
         "description": "Financial performance and profitability data",
-        "columns": ["period", "revenue", "costs", "profit_margin", "roi"],
+        "columns": [
+          "period",
+          "revenue",
+          "costs",
+          "profit_margin",
+          "roi"
+        ],
         "recordCount": 960
       }
     ],
@@ -151,71 +175,106 @@
     }
   },
   "cases": {
-    "analysis": [
-      {
-        "id": "1",
-        "name": "Supply Chain Optimization",
-        "code": "SCO-2024",
-        "description": "Comprehensive supply chain analysis and optimization recommendations"
-      },
-      {
-        "id": "2",
-        "name": "Market Penetration Analysis",
-        "code": "MPA-2024",
-        "description": "Market penetration strategies and competitive analysis"
-      },
-      {
-        "id": "3",
-        "name": "Risk Mitigation Strategy",
-        "code": "RMS-2024",
-        "description": "Enterprise risk assessment and mitigation planning"
-      },
-      {
-        "id": "4",
-        "name": "Financial Performance Review",
-        "code": "FPR-2024",
-        "description": "Quarterly financial performance analysis and forecasting"
-      }
-    ],
+    "analysis": [],
     "filters": {
       "SCO-2024": {
         "organizations": [
-          { "key": "org1", "name": "NVIDIA Corporation" },
-          { "key": "org2", "name": "Supply Chain Partners LLC" },
-          { "key": "org3", "name": "Global Logistics Inc" }
+          {
+            "key": "org1",
+            "name": "NVIDIA Corporation"
+          },
+          {
+            "key": "org2",
+            "name": "Supply Chain Partners LLC"
+          },
+          {
+            "key": "org3",
+            "name": "Global Logistics Inc"
+          }
         ],
         "cms": [
-          { "key": "cm1", "name": "Central Management System" },
-          { "key": "cm2", "name": "Regional Management Hub" },
-          { "key": "cm3", "name": "Local Operations Center" }
+          {
+            "key": "cm1",
+            "name": "Central Management System"
+          },
+          {
+            "key": "cm2",
+            "name": "Regional Management Hub"
+          },
+          {
+            "key": "cm3",
+            "name": "Local Operations Center"
+          }
         ],
         "skus": [
-          { "key": "sku1", "name": "RTX-4090-24GB" },
-          { "key": "sku2", "name": "RTX-4080-16GB" },
-          { "key": "sku3", "name": "RTX-4070-12GB" }
+          {
+            "key": "sku1",
+            "name": "RTX-4090-24GB"
+          },
+          {
+            "key": "sku2",
+            "name": "RTX-4080-16GB"
+          },
+          {
+            "key": "sku3",
+            "name": "RTX-4070-12GB"
+          }
         ],
         "nvpns": [
-          { "key": "nvpn1", "name": "900-2G414-0000-000" },
-          { "key": "nvpn2", "name": "900-2G415-0000-000" },
-          { "key": "nvpn3", "name": "900-2G416-0000-000" }
+          {
+            "key": "nvpn1",
+            "name": "900-2G414-0000-000"
+          },
+          {
+            "key": "nvpn2",
+            "name": "900-2G415-0000-000"
+          },
+          {
+            "key": "nvpn3",
+            "name": "900-2G416-0000-000"
+          }
         ]
       },
       "MPA-2024": {
         "organizations": [
-          { "key": "org1", "name": "NVIDIA Corporation" },
-          { "key": "org4", "name": "Market Research Partners" }
+          {
+            "key": "org1",
+            "name": "NVIDIA Corporation"
+          },
+          {
+            "key": "org4",
+            "name": "Market Research Partners"
+          }
         ],
         "cms": [
-          { "key": "cm1", "name": "Central Management System" },
-          { "key": "cm4", "name": "Market Analytics Center" }
+          {
+            "key": "cm1",
+            "name": "Central Management System"
+          },
+          {
+            "key": "cm4",
+            "name": "Market Analytics Center"
+          }
         ],
         "skus": [
-          { "key": "sku1", "name": "RTX-4090-24GB" },
-          { "key": "sku4", "name": "GTX-1660-6GB" }
+          {
+            "key": "sku1",
+            "name": "RTX-4090-24GB"
+          },
+          {
+            "key": "sku4",
+            "name": "GTX-1660-6GB"
+          }
         ],
         "nvpns": [
-          { "key": "nvpn1", "name": "900-2G414-0000-000" },
-          { "key": "nvpn4", "name": "900-2G417-0000-000" }
+          {
+            "key": "nvpn1",
+            "name": "900-2G414-0000-000"
+          },
+          {
+            "key": "nvpn4",
+            "name": "900-2G417-0000-000"
+          }
         ]
       }
     }
@@ -230,27 +289,26 @@
       "messages": [
         {
           "id": "msg1",
+          "chatId": "1",
           "role": "user",
-          "content": "Can you analyze our Q1 supply chain performance and identify bottlenecks?",
-          "timestamp": "2024-01-15T10:00:00Z"
+          "content": "Can you analyze our Q1 supply chain performance?",
+          "created": "2024-01-15T10:00:00Z"
         },
         {
           "id": "msg2",
+          "chatId": "1",
           "role": "assistant",
           "content": "I'll analyze your Q1 supply chain data. Based on the current metrics, I've identified three key bottlenecks: 1) Supplier lead times averaging 18 days vs target of 12 days, 2) Inventory turnover ratio below optimal at 6.2x, and 3) Transportation costs up 15% due to route inefficiencies.",
-          "timestamp": "2024-01-15T10:01:30Z"
-        },
-        {
-          "id": "msg3",
-          "role": "user",
-          "content": "What recommendations do you have for the lead time issues?",
-          "timestamp": "2024-01-15T10:02:00Z"
-        },
-        {
-          "id": "msg4",
-          "role": "assistant",
-          "content": "For lead time optimization, I recommend: 1) Diversifying supplier base to reduce dependency on single sources, 2) Implementing supplier scorecards with lead time KPIs, 3) Negotiating buffer inventory agreements for critical components, and 4) Establishing regional supplier networks to reduce distance-related delays.",
-          "timestamp": "2024-01-15T10:03:15Z"
+          "created": "2024-01-15T10:01:30Z",
+          "metadata": {
+            "model": "gpt-4o-mini",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 10,
+              "completion_tokens": 10,
+              "total_tokens": 20
+            }
+          }
         }
       ],
       "metadata": {
@@ -270,16 +328,26 @@
       "title": "Market Demand Forecasting",
       "messages": [
         {
-          "id": "msg5",
+          "id": "msg1",
+          "chatId": "1",
           "role": "user",
-          "content": "Generate a demand forecast for RTX 4090 for the next quarter",
-          "timestamp": "2024-01-16T14:30:00Z"
+          "content": "Can you analyze our Q1 supply chain performance?",
+          "created": "2024-01-15T10:00:00Z"
         },
         {
           "id": "msg6",
           "role": "assistant",
           "content": "Based on historical data and market trends, the RTX 4090 demand forecast for Q2 2024 shows: Week 1-4: 15,000 units, Week 5-8: 18,500 units, Week 9-12: 22,000 units. This represents a 23% increase over Q1, driven by gaming market recovery and AI workload adoption.",
-          "timestamp": "2024-01-16T14:31:45Z"
+          "timestamp": "2024-01-16T14:31:45Z",
+          "metadata": {
+            "model": "gpt-4o-mini",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 10,
+              "completion_tokens": 10,
+              "total_tokens": 20
+            }
+          }
         }
       ],
       "metadata": {
@@ -290,6 +358,763 @@
           "timeframe": "Q2-2024"
         }
       }
+    },
+    {
+      "id": "1753290576196",
+      "userId": "user123",
+      "sessionId": "session_1753290576196",
+      "timestamp": "2025-07-23T17:09:36.196Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753290583416",
+      "userId": "user123",
+      "sessionId": "session_1753290583416",
+      "timestamp": "2025-07-23T17:09:43.416Z",
+      "title": "",
+      "messages": [],
+      "name": "rtytr",
+      "updatedAt": "2025-07-23T17:09:51.265Z"
+    },
+    {
+      "id": "1753291007292",
+      "userId": "user123",
+      "sessionId": "session_1753291007292",
+      "timestamp": "2025-07-23T17:16:47.292Z",
+      "title": "Analysis One asdsa sads",
+      "messages": [
+        {
+          "id": "msg1753292063448_2n1mdrqnh",
+          "role": "user",
+          "content": "sdfdsf",
+          "created": "2025-07-23T17:34:23.448Z"
+        },
+        {
+          "id": "msg1753292063448_i04svccsx",
+          "role": "user",
+          "content": "sadsad",
+          "created": "2025-07-23T17:34:23.448Z"
+        },
+        {
+          "id": "msg1753292063448_zut2hsv9s",
+          "role": "user",
+          "content": "sadsa",
+          "created": "2025-07-23T17:34:23.448Z"
+        },
+        {
+          "id": "msg1753292063448_bot_cafvym6d8",
+          "role": "assistant",
+          "content": "Gracias por tu mensaje. Soy un asistente virtual especializado en análisis de datos, optimización de cadena de suministro y análisis de mercado. ¿En qué puedo ayudarte hoy?",
+          "created": "2025-07-23T17:34:23.448Z"
+        },
+        {
+          "id": "msg1753292116140_qd0s860fn",
+          "role": "user",
+          "content": "sdfdsf",
+          "created": "2025-07-23T17:35:16.140Z"
+        },
+        {
+          "id": "msg1753292116140_x970ko0al",
+          "role": "user",
+          "content": "sadsad",
+          "created": "2025-07-23T17:35:16.140Z"
+        },
+        {
+          "id": "msg1753292116140_p22udg5d6",
+          "role": "user",
+          "content": "sadsa",
+          "created": "2025-07-23T17:35:16.140Z"
+        },
+        {
+          "id": "msg1753292116140_m42lldwlg",
+          "role": "user",
+          "content": "asdas",
+          "created": "2025-07-23T17:35:16.140Z"
+        },
+        {
+          "id": "msg1753292116140_bot_wq9wvhfy3",
+          "role": "assistant",
+          "content": "Gracias por tu mensaje. Soy un asistente virtual especializado en análisis de datos, optimización de cadena de suministro y análisis de mercado. ¿En qué puedo ayudarte hoy?",
+          "created": "2025-07-23T17:35:16.140Z"
+        },
+        {
+          "id": "msg1753292263783_cjl4wie1t",
+          "role": "user",
+          "content": "asda",
+          "created": "2025-07-23T17:37:43.783Z"
+        },
+        {
+          "id": "msg1753292263783_bot_9dns67let",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T17:37:43.783Z"
+        },
+        {
+          "id": "msg1753292331997_14fsj6ads",
+          "role": "user",
+          "content": "asda",
+          "created": "2025-07-23T17:38:51.997Z"
+        },
+        {
+          "id": "msg1753292331997_5bu8hrcvu",
+          "role": "user",
+          "content": "fgh",
+          "created": "2025-07-23T17:38:51.997Z"
+        },
+        {
+          "id": "msg1753292331997_bot_ld0bf9rr0",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T17:38:51.997Z"
+        },
+        {
+          "id": "msg1753292371784_t9xp8tmxq",
+          "role": "user",
+          "content": "asda",
+          "created": "2025-07-23T17:39:31.785Z"
+        },
+        {
+          "id": "msg1753292371785_jjo34sw7l",
+          "role": "user",
+          "content": "fgh",
+          "created": "2025-07-23T17:39:31.785Z"
+        },
+        {
+          "id": "msg1753292371785_19np06xvl",
+          "role": "user",
+          "content": "dsf",
+          "created": "2025-07-23T17:39:31.785Z"
+        },
+        {
+          "id": "msg1753292371785_bot_f3rl0q7ek",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T17:39:31.785Z"
+        }
+      ],
+      "name": "Analysis Onedf"
+    },
+    {
+      "id": "1753293238514",
+      "userId": "user123",
+      "sessionId": "session_1753293238514",
+      "timestamp": "2025-07-23T17:53:58.514Z",
+      "title": "",
+      "messages": [
+        {
+          "id": "msg1753293244131_s6qof0nno",
+          "role": "user",
+          "content": "Hola",
+          "created": "2025-07-23T17:54:04.131Z"
+        },
+        {
+          "id": "msg1753293244131_bot_sbucioxtk",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T17:54:04.131Z"
+        }
+      ]
+    },
+    {
+      "id": "1753293380475",
+      "userId": "user123",
+      "sessionId": "session_1753293380475",
+      "timestamp": "2025-07-23T17:56:20.475Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753293460361",
+      "userId": "user123",
+      "sessionId": "session_1753293460361",
+      "timestamp": "2025-07-23T17:57:40.361Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753293469073",
+      "userId": "user123",
+      "sessionId": "session_1753293469073",
+      "timestamp": "2025-07-23T17:57:49.073Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753293639276",
+      "userId": "user123",
+      "sessionId": "session_1753293639276",
+      "timestamp": "2025-07-23T18:00:39.276Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753293641822",
+      "userId": "user123",
+      "sessionId": "session_1753293641822",
+      "timestamp": "2025-07-23T18:00:41.822Z",
+      "title": "SDFDSF",
+      "messages": [
+        {
+          "id": "msg1753293644381_6e1mfb1zk",
+          "role": "user",
+          "content": "asda",
+          "created": "2025-07-23T18:00:44.381Z"
+        },
+        {
+          "id": "msg1753293644381_bot_wflxn2pr2",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:00:44.381Z"
+        },
+        {
+          "id": "msg1753293647080_96vvz1ilt",
+          "role": "user",
+          "content": "asda",
+          "created": "2025-07-23T18:00:47.080Z"
+        },
+        {
+          "id": "msg1753293647080_fhoeqc14r",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:00:47.080Z"
+        },
+        {
+          "id": "msg1753293647080_bot_xsqybwbog",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:00:47.080Z"
+        },
+        {
+          "id": "msg1753294155692_k8kl6rn29",
+          "role": "user",
+          "content": "asda",
+          "created": "2025-07-23T18:09:15.692Z"
+        },
+        {
+          "id": "msg1753294155692_u2bj6was3",
+          "role": "user",
+          "content": "asda",
+          "created": "2025-07-23T18:09:15.692Z"
+        },
+        {
+          "id": "msg1753294155692_i9xn3cvie",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:09:15.692Z"
+        },
+        {
+          "id": "msg1753294155692_4xrej529f",
+          "role": "user",
+          "content": "JGHJH",
+          "created": "2025-07-23T18:09:15.692Z"
+        },
+        {
+          "id": "msg1753294155692_bot_vlo1evclm",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:09:15.692Z"
+        }
+      ]
+    },
+    {
+      "id": "1753295874503",
+      "userId": "user123",
+      "sessionId": "session_1753295874503",
+      "timestamp": "2025-07-23T18:37:54.503Z",
+      "title": "",
+      "messages": [
+        {
+          "id": "msg1753296018833_uqlzl0zt8",
+          "role": "user",
+          "content": "dfg",
+          "created": "2025-07-23T18:40:18.833Z"
+        },
+        {
+          "id": "msg1753296018833_bot_b1gjo38ow",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:40:18.833Z"
+        },
+        {
+          "id": "msg1753296027989_xidqhx3f9",
+          "role": "user",
+          "content": "dfg",
+          "created": "2025-07-23T18:40:27.989Z"
+        },
+        {
+          "id": "msg1753296027989_wp1q6ii0l",
+          "role": "user",
+          "content": "fgdf",
+          "created": "2025-07-23T18:40:27.989Z"
+        },
+        {
+          "id": "msg1753296027989_bot_floxq1s1g",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:40:27.989Z"
+        },
+        {
+          "id": "msg1753296033861_449z9fwnm",
+          "role": "user",
+          "content": "dfg",
+          "created": "2025-07-23T18:40:33.861Z"
+        },
+        {
+          "id": "msg1753296033861_2di5gm6fe",
+          "role": "user",
+          "content": "dfg",
+          "created": "2025-07-23T18:40:33.861Z"
+        },
+        {
+          "id": "msg1753296033861_ip26qm5zi",
+          "role": "user",
+          "content": "fgdf",
+          "created": "2025-07-23T18:40:33.861Z"
+        },
+        {
+          "id": "msg1753296033861_ycki05359",
+          "role": "user",
+          "content": "dfgfd",
+          "created": "2025-07-23T18:40:33.861Z"
+        },
+        {
+          "id": "msg1753296033861_bot_d0njogkdl",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:40:33.861Z"
+        },
+        {
+          "id": "msg1753296134880_x7t8t1h42",
+          "role": "user",
+          "content": "dfg",
+          "created": "2025-07-23T18:42:14.880Z"
+        },
+        {
+          "id": "msg1753296134880_j3j2tpnor",
+          "role": "user",
+          "content": "dfg",
+          "created": "2025-07-23T18:42:14.880Z"
+        },
+        {
+          "id": "msg1753296134880_wgae8bmu6",
+          "role": "user",
+          "content": "fgdf",
+          "created": "2025-07-23T18:42:14.880Z"
+        },
+        {
+          "id": "msg1753296134880_hu9pg5fg8",
+          "role": "user",
+          "content": "dfg",
+          "created": "2025-07-23T18:42:14.880Z"
+        },
+        {
+          "id": "msg1753296134880_qu0c9utev",
+          "role": "user",
+          "content": "dfg",
+          "created": "2025-07-23T18:42:14.880Z"
+        },
+        {
+          "id": "msg1753296134880_shx4faljb",
+          "role": "user",
+          "content": "fgdf",
+          "created": "2025-07-23T18:42:14.880Z"
+        },
+        {
+          "id": "msg1753296134880_y2c1vfrwk",
+          "role": "user",
+          "content": "dfgfd",
+          "created": "2025-07-23T18:42:14.880Z"
+        },
+        {
+          "id": "msg1753296134880_rpxrwuthz",
+          "role": "user",
+          "content": "sds",
+          "created": "2025-07-23T18:42:14.880Z"
+        },
+        {
+          "id": "msg1753296134880_bot_plm51v2j9",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:42:14.880Z"
+        }
+      ]
+    },
+    {
+      "id": "1753296141908",
+      "userId": "user123",
+      "sessionId": "session_1753296141908",
+      "timestamp": "2025-07-23T18:42:21.908Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753296146737",
+      "userId": "user123",
+      "sessionId": "session_1753296146737",
+      "timestamp": "2025-07-23T18:42:26.737Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753296185792",
+      "userId": "user123",
+      "sessionId": "session_1753296185792",
+      "timestamp": "2025-07-23T18:43:05.792Z",
+      "title": "",
+      "messages": [
+        {
+          "id": "msg1753296188321_ajyh1eqnf",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:43:08.321Z"
+        },
+        {
+          "id": "msg1753296188321_bot_eco8akwvz",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:43:08.321Z"
+        },
+        {
+          "id": "msg1753296189689_1bkek3dvv",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:43:09.689Z"
+        },
+        {
+          "id": "msg1753296189689_pwu3bjrvd",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:43:09.689Z"
+        },
+        {
+          "id": "msg1753296189689_bot_s1uq82fuz",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:43:09.689Z"
+        },
+        {
+          "id": "msg1753296193965_i3aht72rz",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:43:13.965Z"
+        },
+        {
+          "id": "msg1753296193965_u9f0qtypb",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:43:13.965Z"
+        },
+        {
+          "id": "msg1753296193965_3w9xaykhi",
+          "role": "user",
+          "content": "fdfd",
+          "created": "2025-07-23T18:43:13.965Z"
+        },
+        {
+          "id": "msg1753296193965_bot_ma8zxpj3u",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:43:13.965Z"
+        }
+      ]
+    },
+    {
+      "id": "1753296205078",
+      "userId": "user123",
+      "sessionId": "session_1753296205078",
+      "timestamp": "2025-07-23T18:43:25.078Z",
+      "title": "",
+      "messages": [
+        {
+          "id": "msg1753296206689_ypr5r8s6d",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:43:26.689Z"
+        },
+        {
+          "id": "msg1753296206689_bot_dogeda40s",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:43:26.689Z"
+        },
+        {
+          "id": "msg1753296208656_2o5219yed",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:43:28.656Z"
+        },
+        {
+          "id": "msg1753296208656_xnej9kkv1",
+          "role": "user",
+          "content": "dffd",
+          "created": "2025-07-23T18:43:28.656Z"
+        },
+        {
+          "id": "msg1753296208656_bot_yxzemumrq",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:43:28.656Z"
+        },
+        {
+          "id": "msg1753296288512_z7xu639bg",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:44:48.512Z"
+        },
+        {
+          "id": "msg1753296288512_7y30f7ct3",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T18:44:48.512Z"
+        },
+        {
+          "id": "msg1753296288512_f5kk7iwg8",
+          "role": "user",
+          "content": "dffd",
+          "created": "2025-07-23T18:44:48.512Z"
+        },
+        {
+          "id": "msg1753296288512_hkashk35r",
+          "role": "user",
+          "content": "gfsdsgdfgdfgfdgfdsgfdgf",
+          "created": "2025-07-23T18:44:48.512Z"
+        },
+        {
+          "id": "msg1753296288512_bot_pa5vqnos5",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:44:48.512Z"
+        }
+      ]
+    },
+    {
+      "id": "1753296333317",
+      "userId": "user123",
+      "sessionId": "session_1753296333317",
+      "timestamp": "2025-07-23T18:45:33.317Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753296360527",
+      "userId": "user123",
+      "sessionId": "session_1753296360527",
+      "timestamp": "2025-07-23T18:46:00.527Z",
+      "title": "Analysis Oneasds",
+      "messages": [
+        {
+          "id": "msg1753296362571_xz7gbqglp",
+          "role": "user",
+          "content": "sadsa",
+          "created": "2025-07-23T18:46:02.571Z"
+        },
+        {
+          "id": "msg1753296362571_bot_q6z6lc4xj",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:46:02.571Z"
+        },
+        {
+          "id": "msg1753296365282_4zmen2mh2",
+          "role": "user",
+          "content": "asdasdsadsadsa",
+          "created": "2025-07-23T18:46:05.282Z"
+        },
+        {
+          "id": "msg1753296365282_bot_1cgzys7jb",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:46:05.282Z"
+        },
+        {
+          "id": "msg1753296366121_1h0cwtg0o",
+          "role": "user",
+          "content": "asdsadsa",
+          "created": "2025-07-23T18:46:06.121Z"
+        },
+        {
+          "id": "msg1753296366121_bot_t6evdmiui",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T18:46:06.121Z"
+        }
+      ]
+    },
+    {
+      "id": "1753296958458",
+      "userId": "user123",
+      "sessionId": "session_1753296958458",
+      "timestamp": "2025-07-23T18:55:58.458Z",
+      "title": "d",
+      "messages": []
+    },
+    {
+      "id": "1753297089689",
+      "userId": "user123",
+      "sessionId": "session_1753297089689",
+      "timestamp": "2025-07-23T18:58:09.689Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753297091981",
+      "userId": "user123",
+      "sessionId": "session_1753297091981",
+      "timestamp": "2025-07-23T18:58:11.981Z",
+      "title": "Analysis Six",
+      "messages": []
+    },
+    {
+      "id": "1753297094825",
+      "userId": "user123",
+      "sessionId": "session_1753297094825",
+      "timestamp": "2025-07-23T18:58:14.825Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753297096773",
+      "userId": "user123",
+      "sessionId": "session_1753297096773",
+      "timestamp": "2025-07-23T18:58:16.773Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753297125795",
+      "userId": "user123",
+      "sessionId": "session_1753297125795",
+      "timestamp": "2025-07-23T18:58:45.795Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753297130202",
+      "userId": "user123",
+      "sessionId": "session_1753297130202",
+      "timestamp": "2025-07-23T18:58:50.202Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753297402428",
+      "userId": "user123",
+      "sessionId": "session_1753297402428",
+      "timestamp": "2025-07-23T19:03:22.428Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753297406252",
+      "userId": "user123",
+      "sessionId": "session_1753297406252",
+      "timestamp": "2025-07-23T19:03:26.252Z",
+      "title": "Analysis One f",
+      "messages": [
+        {
+          "id": "msg1753298025160_an7sgwve4",
+          "role": "user",
+          "content": "asdasd",
+          "created": "2025-07-23T19:13:45.160Z"
+        },
+        {
+          "id": "msg1753298025160_bot_bwad7bnwt",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T19:13:45.160Z"
+        },
+        {
+          "id": "msg1753298025946_aofrt6ay5",
+          "role": "user",
+          "content": "asdsa",
+          "created": "2025-07-23T19:13:45.946Z"
+        },
+        {
+          "id": "msg1753298025946_bot_eexlmushr",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T19:13:45.946Z"
+        }
+      ]
+    },
+    {
+      "id": "1753298266430",
+      "userId": "user123",
+      "sessionId": "session_1753298266430",
+      "timestamp": "2025-07-23T19:17:46.430Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753298268169",
+      "userId": "user123",
+      "sessionId": "session_1753298268169",
+      "timestamp": "2025-07-23T19:17:48.169Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753298269976",
+      "userId": "user123",
+      "sessionId": "session_1753298269976",
+      "timestamp": "2025-07-23T19:17:49.976Z",
+      "title": "",
+      "messages": []
+    },
+    {
+      "id": "1753298272484",
+      "userId": "user123",
+      "sessionId": "session_1753298272484",
+      "timestamp": "2025-07-23T19:17:52.484Z",
+      "title": "",
+      "messages": [
+        {
+          "id": "msg1753301988517_7cgzlt7u1",
+          "role": "user",
+          "content": "GHJ",
+          "created": "2025-07-23T20:19:48.517Z"
+        },
+        {
+          "id": "msg1753301988517_bot_6xbrbpxz9",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T20:19:48.517Z"
+        },
+        {
+          "id": "msg1753302105440_4y2wxoujy",
+          "role": "user",
+          "content": "ASD",
+          "created": "2025-07-23T20:21:45.440Z"
+        },
+        {
+          "id": "msg1753302105440_bot_v66vi0w77",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T20:21:45.440Z"
+        }
+      ]
+    },
+    {
+      "id": "1753302190748",
+      "userId": "user123",
+      "sessionId": "session_1753302190748",
+      "timestamp": "2025-07-23T20:23:10.748Z",
+      "title": "Test 2111",
+      "messages": [
+        {
+          "id": "msg1753302195670_7f6rpptp2",
+          "role": "user",
+          "content": "HI",
+          "created": "2025-07-23T20:23:15.670Z"
+        },
+        {
+          "id": "msg1753302195670_bot_3v3kbb2ds",
+          "role": "assistant",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-23T20:23:15.670Z"
+        }
+      ]
     }
   ],
   "auxiliary": {
@@ -297,10 +1122,26 @@
       "id": "table_001",
       "title": "Supply Chain Performance Metrics",
       "columns": [
-        { "key": "supplier", "label": "Supplier", "type": "string" },
-        { "key": "leadTime", "label": "Lead Time (days)", "type": "number" },
-        { "key": "qualityScore", "label": "Quality Score", "type": "number" },
-        { "key": "cost", "label": "Cost ($)", "type": "currency" }
+        {
+          "key": "supplier",
+          "label": "Supplier",
+          "type": "string"
+        },
+        {
+          "key": "leadTime",
+          "label": "Lead Time (days)",
+          "type": "number"
+        },
+        {
+          "key": "qualityScore",
+          "label": "Quality Score",
+          "type": "number"
+        },
+        {
+          "key": "cost",
+          "label": "Cost ($)",
+          "type": "currency"
+        }
       ],
       "rows": [
         {
@@ -341,12 +1182,24 @@
       "chartData": {
         "type": "bar",
         "data": {
-          "labels": ["Supplier A", "Supplier B", "Supplier C"],
+          "labels": [
+            "Supplier A",
+            "Supplier B",
+            "Supplier C"
+          ],
           "datasets": [
             {
               "label": "Lead Time (days)",
-              "data": [14, 21, 16],
-              "backgroundColor": ["#36A2EB", "#FF6384", "#FFCE56"]
+              "data": [
+                14,
+                21,
+                16
+              ],
+              "backgroundColor": [
+                "#36A2EB",
+                "#FF6384",
+                "#FFCE56"
+              ]
             }
           ]
         },
