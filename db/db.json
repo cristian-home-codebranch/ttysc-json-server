@@ -292,9 +292,13 @@
       }
     }
   ],
-  "chat": {
-    
-  },
+  "chat": [
+    {
+      "id": "1",
+      "name": "Supply Chain Analysis Q1 2024",
+      "messages": []
+    }
+  ],
   "auxiliary": {
     "tableData": {
       "id": "table_001",
