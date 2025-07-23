@@ -292,6 +292,9 @@
       }
     }
   ],
+  "chat": {
+    
+  },
   "auxiliary": {
     "tableData": {
       "id": "table_001",
