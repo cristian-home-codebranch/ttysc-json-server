@@ -5,7 +5,8 @@ const server = createServer("db/db.json");
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, "0.0.0.0", () => {
   console.log(`Mock Server running on http://0.0.0.0:${PORT}`);
-  console.log("\n📋 Available endpoints:");
+  console.log("\n� AUTHENTICATION ENABLED");
+  console.log("\n�📋 Available endpoints:");
 
   console.log("\n🔍 Cases endpoints:");
   console.log("  GET /cases");
@@ -41,4 +42,12 @@ server.listen(PORT, "0.0.0.0", () => {
   console.log("  field_ne=value    - No igual");
   console.log("  field_like=text   - Contiene texto");
   console.log("  dateFrom/dateTo   - Filtros de fecha (solo /feedback)");
+
+  console.log("\n🔑 Authentication examples:");
+  console.log("  curl -u admin:password123 http://localhost:5000/cases");
+  console.log("  fetch('http://localhost:5000/cases', {");
+  console.log(
+    "    headers: { 'Authorization': 'Basic ' + btoa('admin:password123') }"
+  );
+  console.log("  })");
 });
