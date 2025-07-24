@@ -1,10 +1,7 @@
 {
   "settings": {
-    "userId": "user123",
     "shareChats": true,
-    "hideIndexTable": false,
-    "createdAt": "2024-01-15T10:00:00Z",
-    "updatedAt": "2024-01-15T10:00:00Z"
+    "hideIndexTable": true
   },
   "definitions": [
     {
@@ -180,42 +177,102 @@
     "filters": {
       "SCO-2024": {
         "organizations": [
-          { "key": "org1", "name": "NVIDIA Corporation" },
-          { "key": "org2", "name": "Supply Chain Partners LLC" },
-          { "key": "org3", "name": "Global Logistics Inc" }
+          {
+            "key": "org1",
+            "name": "NVIDIA Corporation"
+          },
+          {
+            "key": "org2",
+            "name": "Supply Chain Partners LLC"
+          },
+          {
+            "key": "org3",
+            "name": "Global Logistics Inc"
+          }
         ],
         "cms": [
-          { "key": "cm1", "name": "Central Management System" },
-          { "key": "cm2", "name": "Regional Management Hub" },
-          { "key": "cm3", "name": "Local Operations Center" }
+          {
+            "key": "cm1",
+            "name": "Central Management System"
+          },
+          {
+            "key": "cm2",
+            "name": "Regional Management Hub"
+          },
+          {
+            "key": "cm3",
+            "name": "Local Operations Center"
+          }
         ],
         "skus": [
-          { "key": "sku1", "name": "RTX-4090-24GB" },
-          { "key": "sku2", "name": "RTX-4080-16GB" },
-          { "key": "sku3", "name": "RTX-4070-12GB" }
+          {
+            "key": "sku1",
+            "name": "RTX-4090-24GB"
+          },
+          {
+            "key": "sku2",
+            "name": "RTX-4080-16GB"
+          },
+          {
+            "key": "sku3",
+            "name": "RTX-4070-12GB"
+          }
         ],
         "nvpns": [
-          { "key": "nvpn1", "name": "900-2G414-0000-000" },
-          { "key": "nvpn2", "name": "900-2G415-0000-000" },
-          { "key": "nvpn3", "name": "900-2G416-0000-000" }
+          {
+            "key": "nvpn1",
+            "name": "900-2G414-0000-000"
+          },
+          {
+            "key": "nvpn2",
+            "name": "900-2G415-0000-000"
+          },
+          {
+            "key": "nvpn3",
+            "name": "900-2G416-0000-000"
+          }
         ]
       },
       "MPA-2024": {
         "organizations": [
-          { "key": "org1", "name": "NVIDIA Corporation" },
-          { "key": "org4", "name": "Market Research Partners" }
+          {
+            "key": "org1",
+            "name": "NVIDIA Corporation"
+          },
+          {
+            "key": "org4",
+            "name": "Market Research Partners"
+          }
         ],
         "cms": [
-          { "key": "cm1", "name": "Central Management System" },
-          { "key": "cm4", "name": "Market Analytics Center" }
+          {
+            "key": "cm1",
+            "name": "Central Management System"
+          },
+          {
+            "key": "cm4",
+            "name": "Market Analytics Center"
+          }
         ],
         "skus": [
-          { "key": "sku1", "name": "RTX-4090-24GB" },
-          { "key": "sku4", "name": "GTX-1660-6GB" }
+          {
+            "key": "sku1",
+            "name": "RTX-4090-24GB"
+          },
+          {
+            "key": "sku4",
+            "name": "GTX-1660-6GB"
+          }
         ],
         "nvpns": [
-          { "key": "nvpn1", "name": "900-2G414-0000-000" },
-          { "key": "nvpn4", "name": "900-2G417-0000-000" }
+          {
+            "key": "nvpn1",
+            "name": "900-2G414-0000-000"
+          },
+          {
+            "key": "nvpn4",
+            "name": "900-2G417-0000-000"
+          }
         ]
       }
     }
@@ -304,10 +361,26 @@
       "id": "table_001",
       "title": "Supply Chain Performance Metrics",
       "columns": [
-        { "key": "supplier", "label": "Supplier", "type": "string" },
-        { "key": "leadTime", "label": "Lead Time (days)", "type": "number" },
-        { "key": "qualityScore", "label": "Quality Score", "type": "number" },
-        { "key": "cost", "label": "Cost ($)", "type": "currency" }
+        {
+          "key": "supplier",
+          "label": "Supplier",
+          "type": "string"
+        },
+        {
+          "key": "leadTime",
+          "label": "Lead Time (days)",
+          "type": "number"
+        },
+        {
+          "key": "qualityScore",
+          "label": "Quality Score",
+          "type": "number"
+        },
+        {
+          "key": "cost",
+          "label": "Cost ($)",
+          "type": "currency"
+        }
       ],
       "rows": [
         {
