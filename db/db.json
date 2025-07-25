@@ -9,28 +9,46 @@
       "name": "Supply Chain Optimization",
       "description": "Comprehensive analysis of supply chain processes, bottlenecks, and optimization opportunities.",
       "category": "Supply Chain",
-      "tags": ["logistics", "optimization", "efficiency"]
+      "tags": [
+        "logistics",
+        "optimization",
+        "efficiency"
+      ]
     },
     {
       "id": "2",
       "name": "Market Demand Forecast",
       "description": "Statistical and AI-driven forecasting of market demand patterns for strategic planning.",
       "category": "Market Analysis",
-      "tags": ["forecasting", "demand", "market trends"]
+      "tags": [
+        "forecasting",
+        "demand",
+        "market trends"
+      ]
     },
     {
       "id": "3",
       "name": "Risk Assessment Matrix",
       "description": "Quantitative and qualitative risk analysis framework for business decision making.",
       "category": "Risk Management",
-      "tags": ["risk", "assessment", "mitigation", "compliance"]
+      "tags": [
+        "risk",
+        "assessment",
+        "mitigation",
+        "compliance"
+      ]
     },
     {
       "id": "4",
       "name": "Financial Impact Analysis",
       "description": "Analysis of financial implications and ROI for strategic initiatives.",
       "category": "Finance",
-      "tags": ["finance", "ROI", "impact", "profitability"]
+      "tags": [
+        "finance",
+        "ROI",
+        "impact",
+        "profitability"
+      ]
     }
   ],
   "feedback": [
@@ -108,7 +126,13 @@
         "name": "financial_metrics",
         "displayName": "Financial Metrics",
         "description": "Financial performance and profitability data",
-        "columns": ["period", "revenue", "costs", "profit_margin", "roi"],
+        "columns": [
+          "period",
+          "revenue",
+          "costs",
+          "profit_margin",
+          "roi"
+        ],
         "recordCount": 960
       }
     ],
@@ -150,28 +174,12 @@
   "cases": {
     "analysis": [
       {
-        "id": "1",
-        "name": "Supply Chain Optimization",
-        "code": "SCO-2024",
-        "description": "Comprehensive supply chain analysis and optimization recommendations"
+        "key": "SCO-2024",
+        "name": "Supply Chain Optimization"
       },
       {
-        "id": "2",
-        "name": "Market Penetration Analysis",
-        "code": "MPA-2024",
-        "description": "Market penetration strategies and competitive analysis"
-      },
-      {
-        "id": "3",
-        "name": "Risk Mitigation Strategy",
-        "code": "RMS-2024",
-        "description": "Enterprise risk assessment and mitigation planning"
-      },
-      {
-        "id": "4",
-        "name": "Financial Performance Review",
-        "code": "FPR-2024",
-        "description": "Quarterly financial performance analysis and forecasting"
+        "key": "MPA-2024",
+        "name": "Market Penetration Analysis"
       }
     ],
     "filters": {
@@ -190,7 +198,7 @@
             "name": "Global Logistics Inc"
           }
         ],
-        "cms": [
+        "CM": [
           {
             "key": "cm1",
             "name": "Central Management System"
@@ -204,7 +212,7 @@
             "name": "Local Operations Center"
           }
         ],
-        "skus": [
+        "SKU": [
           {
             "key": "sku1",
             "name": "RTX-4090-24GB"
@@ -218,7 +226,7 @@
             "name": "RTX-4070-12GB"
           }
         ],
-        "nvpns": [
+        "NVPN": [
           {
             "key": "nvpn1",
             "name": "900-2G414-0000-000"
@@ -244,7 +252,7 @@
             "name": "Market Research Partners"
           }
         ],
-        "cms": [
+        "CM": [
           {
             "key": "cm1",
             "name": "Central Management System"
@@ -254,7 +262,7 @@
             "name": "Market Analytics Center"
           }
         ],
-        "skus": [
+        "SKU": [
           {
             "key": "sku1",
             "name": "RTX-4090-24GB"
@@ -264,7 +272,7 @@
             "name": "GTX-1660-6GB"
           }
         ],
-        "nvpns": [
+        "NVPN": [
           {
             "key": "nvpn1",
             "name": "900-2G414-0000-000"
@@ -287,27 +295,26 @@
       "messages": [
         {
           "id": "msg1",
+          "chatId": "1",
           "role": "user",
-          "content": "Can you analyze our Q1 supply chain performance and identify bottlenecks?",
-          "timestamp": "2024-01-15T10:00:00Z"
+          "content": "Can you analyze our Q1 supply chain performance?",
+          "created": "2024-01-15T10:00:00Z"
         },
         {
           "id": "msg2",
+          "chatId": "1",
           "role": "assistant",
           "content": "I'll analyze your Q1 supply chain data. Based on the current metrics, I've identified three key bottlenecks: 1) Supplier lead times averaging 18 days vs target of 12 days, 2) Inventory turnover ratio below optimal at 6.2x, and 3) Transportation costs up 15% due to route inefficiencies.",
-          "timestamp": "2024-01-15T10:01:30Z"
-        },
-        {
-          "id": "msg3",
-          "role": "user",
-          "content": "What recommendations do you have for the lead time issues?",
-          "timestamp": "2024-01-15T10:02:00Z"
-        },
-        {
-          "id": "msg4",
-          "role": "assistant",
-          "content": "For lead time optimization, I recommend: 1) Diversifying supplier base to reduce dependency on single sources, 2) Implementing supplier scorecards with lead time KPIs, 3) Negotiating buffer inventory agreements for critical components, and 4) Establishing regional supplier networks to reduce distance-related delays.",
-          "timestamp": "2024-01-15T10:03:15Z"
+          "created": "2024-01-15T10:01:30Z",
+          "metadata": {
+            "model": "gpt-4o-mini",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 10,
+              "completion_tokens": 10,
+              "total_tokens": 20
+            }
+          }
         }
       ],
       "metadata": {
@@ -327,16 +334,26 @@
       "title": "Market Demand Forecasting",
       "messages": [
         {
-          "id": "msg5",
+          "id": "msg1",
+          "chatId": "1",
           "role": "user",
-          "content": "Generate a demand forecast for RTX 4090 for the next quarter",
-          "timestamp": "2024-01-16T14:30:00Z"
+          "content": "Can you analyze our Q1 supply chain performance?",
+          "created": "2024-01-15T10:00:00Z"
         },
         {
           "id": "msg6",
           "role": "assistant",
           "content": "Based on historical data and market trends, the RTX 4090 demand forecast for Q2 2024 shows: Week 1-4: 15,000 units, Week 5-8: 18,500 units, Week 9-12: 22,000 units. This represents a 23% increase over Q1, driven by gaming market recovery and AI workload adoption.",
-          "timestamp": "2024-01-16T14:31:45Z"
+          "timestamp": "2024-01-16T14:31:45Z",
+          "metadata": {
+            "model": "gpt-4o-mini",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 10,
+              "completion_tokens": 10,
+              "total_tokens": 20
+            }
+          }
         }
       ],
       "metadata": {
@@ -347,6 +364,28 @@
           "timeframe": "Q2-2024"
         }
       }
+    },
+    {
+      "id": "1753326044645",
+      "userId": "user123",
+      "sessionId": "session_1753326044645",
+      "created": "2025-07-24T03:00:44.645Z",
+      "title": "Analysis One 1",
+      "messages": [
+        {
+          "id": "msg2025-07-24T03:00:49.285Z_mg95cz1y9",
+          "role": "user",
+          "content": "Hello",
+          "created": "2025-07-24T03:00:49.285Z"
+        },
+        {
+          "id": "msg1753326049285_bot_qps9g3eyh",
+          "role": "assistant",
+          "title": "Response from bot",
+          "content": "Thank you for your message. I am a virtual assistant specialized in data analysis, supply chain optimization, and market analysis. How can I help you today?",
+          "created": "2025-07-24T03:00:49.285Z"
+        }
+      ]
     }
   ],
   "chat": [
@@ -421,12 +460,24 @@
       "chartData": {
         "type": "bar",
         "data": {
-          "labels": ["Supplier A", "Supplier B", "Supplier C"],
+          "labels": [
+            "Supplier A",
+            "Supplier B",
+            "Supplier C"
+          ],
           "datasets": [
             {
               "label": "Lead Time (days)",
-              "data": [14, 21, 16],
-              "backgroundColor": ["#36A2EB", "#FF6384", "#FFCE56"]
+              "data": [
+                14,
+                21,
+                16
+              ],
+              "backgroundColor": [
+                "#36A2EB",
+                "#FF6384",
+                "#FFCE56"
+              ]
             }
           ]
         },
