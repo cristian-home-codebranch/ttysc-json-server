@@ -28,6 +28,11 @@ server.listen(PORT, "0.0.0.0", () => {
   console.log("\n💬 Chat endpoints:");
   console.log("  GET /chats");
   console.log("  POST /chat");
+  console.log("  PUT /messages/:messageId/feedback");
+  
+  console.log("\n📊 Export endpoints:");
+  console.log("  GET /export/:tableId?format=csv");
+  console.log("  GET /export/:tableId?format=excel");
   
   console.log("\n🛠  Utility endpoints:");
   console.log("  GET /health");
