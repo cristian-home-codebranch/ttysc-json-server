@@ -38,6 +38,9 @@ server.listen(PORT, "0.0.0.0", () => {
   console.log("  GET /health");
   console.log("  GET /help");
   console.log("  GET /");
+  
+  console.log("\n📊 Auxiliary endpoints:");
+  console.log("  GET /auxiliary/chart");
 
   console.log("\n🔧 Query parameters:");
   console.log("  _page=1           - Página número");
