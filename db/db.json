@@ -9,46 +9,28 @@
       "name": "Supply Chain Optimization",
       "description": "Comprehensive analysis of supply chain processes, bottlenecks, and optimization opportunities.",
       "category": "Supply Chain",
-      "tags": [
-        "logistics",
-        "optimization",
-        "efficiency"
-      ]
+      "tags": ["logistics", "optimization", "efficiency"]
     },
     {
       "id": "2",
       "name": "Market Demand Forecast",
       "description": "Statistical and AI-driven forecasting of market demand patterns for strategic planning.",
       "category": "Market Analysis",
-      "tags": [
-        "forecasting",
-        "demand",
-        "market trends"
-      ]
+      "tags": ["forecasting", "demand", "market trends"]
     },
     {
       "id": "3",
       "name": "Risk Assessment Matrix",
       "description": "Quantitative and qualitative risk analysis framework for business decision making.",
       "category": "Risk Management",
-      "tags": [
-        "risk",
-        "assessment",
-        "mitigation",
-        "compliance"
-      ]
+      "tags": ["risk", "assessment", "mitigation", "compliance"]
     },
     {
       "id": "4",
       "name": "Financial Impact Analysis",
       "description": "Analysis of financial implications and ROI for strategic initiatives.",
       "category": "Finance",
-      "tags": [
-        "finance",
-        "ROI",
-        "impact",
-        "profitability"
-      ]
+      "tags": ["finance", "ROI", "impact", "profitability"]
     }
   ],
   "feedback": [
@@ -75,6 +57,13 @@
       "timestamp": "2024-01-17T16:45:00Z",
       "status": "in_progress",
       "category": "bug_report"
+    }
+  ],
+  "chartMappings": [
+    {
+      "uuid": "1f07462a-011e-6631-b36f-001198cde1dd",
+      "chartExampleId": "demand-allocation-trend",
+      "createdAt": "2024-12-01T15:00:00Z"
     }
   ],
   "options": {
@@ -126,13 +115,7 @@
         "name": "financial_metrics",
         "displayName": "Financial Metrics",
         "description": "Financial performance and profitability data",
-        "columns": [
-          "period",
-          "revenue",
-          "costs",
-          "profit_margin",
-          "roi"
-        ],
+        "columns": ["period", "revenue", "costs", "profit_margin", "roi"],
         "recordCount": 960
       }
     ],
@@ -460,24 +443,12 @@
       "chartData": {
         "type": "bar",
         "data": {
-          "labels": [
-            "Supplier A",
-            "Supplier B",
-            "Supplier C"
-          ],
+          "labels": ["Supplier A", "Supplier B", "Supplier C"],
           "datasets": [
             {
               "label": "Lead Time (days)",
-              "data": [
-                14,
-                21,
-                16
-              ],
-              "backgroundColor": [
-                "#36A2EB",
-                "#FF6384",
-                "#FFCE56"
-              ]
+              "data": [14, 21, 16],
+              "backgroundColor": ["#36A2EB", "#FF6384", "#FFCE56"]
             }
           ]
         },
