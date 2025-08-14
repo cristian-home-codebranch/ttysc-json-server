@@ -1,0 +1,392 @@
+[
+  {
+    "id": "2c784f87-b2d2-4700-93a2-8cd0cbebb4fc",
+    "choices": [
+      {
+        "message": {
+          "content": "Starting supply chain workflow...",
+          "role": null
+        },
+        "finish_reason": null,
+        "index": 0,
+        "workflow_status": "started",
+        "query": "Show me all parts from the MPS manufacturer that have a lead time longer than 200 weeks."
+      }
+    ],
+    "created": "2025-08-12T14:59:27.937715",
+    "model": "supply_chain_workflow",
+    "object": "chat.completion.chunk"
+  },
+
+  {
+    "id": "2c784f87-b2d2-4700-93a2-8cd0cbebb4fc",
+    "choices": [
+      {
+        "message": {
+          "content": "[Planning completed]",
+          "role": null
+        },
+        "finish_reason": null,
+        "index": 0,
+        "workflow_status": "in_progress",
+        "step": "Planning completed",
+        "data": {
+          "entities_found": 2
+        }
+      }
+    ],
+    "created": "2025-08-12T14:59:34.303794",
+    "model": "supply_chain_workflow",
+    "object": "chat.completion.chunk"
+  },
+
+  {
+    "id": "2c784f87-b2d2-4700-93a2-8cd0cbebb4fc",
+    "choices": [
+      {
+        "message": {
+          "content": "[Entity validation completed]",
+          "role": null
+        },
+        "finish_reason": null,
+        "index": 0,
+        "workflow_status": "in_progress",
+        "step": "Entity validation completed",
+        "data": {
+          "valid_entities": 2,
+          "inferred_entities": 0
+        }
+      }
+    ],
+    "created": "2025-08-12T14:59:34.307893",
+    "model": "supply_chain_workflow",
+    "object": "chat.completion.chunk"
+  },
+
+  {
+    "id": "2c784f87-b2d2-4700-93a2-8cd0cbebb4fc",
+    "choices": [
+      {
+        "message": {
+          "content": "[Data source selected]",
+          "role": null
+        },
+        "finish_reason": null,
+        "index": 0,
+        "workflow_status": "in_progress",
+        "step": "Data source selected",
+        "data": {
+          "selected": "databricks_odp"
+        }
+      }
+    ],
+    "created": "2025-08-12T14:59:34.313414",
+    "model": "supply_chain_workflow",
+    "object": "chat.completion.chunk"
+  },
+  {
+    "id": "2c784f87-b2d2-4700-93a2-8cd0cbebb4fc",
+    "choices": [
+      {
+        "message": {
+          "content": "[Query refinement completed]",
+          "role": null
+        },
+        "finish_reason": null,
+        "index": 0,
+        "workflow_status": "in_progress",
+        "step": "Query refinement completed",
+        "data": {
+          "refinement_applied": false
+        }
+      }
+    ],
+    "created": "2025-08-12T14:59:34.319408",
+    "model": "supply_chain_workflow",
+    "object": "chat.completion.chunk"
+  },
+
+  {
+    "id": "2c784f87-b2d2-4700-93a2-8cd0cbebb4fc",
+    "choices": [
+      {
+        "message": {
+          "content": "[SQL generation completed]",
+          "role": null
+        },
+        "finish_reason": null,
+        "index": 0,
+        "workflow_status": "in_progress",
+        "step": "SQL generation completed",
+        "data": {
+          "query_generated": "SELECT nvpn, description, lt_weeks, mfr, cm_site_name FROM pbrs_shortage WHERE mfr = 'MPS' AND lt_weeks > 200"
+        }
+      }
+    ],
+    "created": "2025-08-12T14:59:38.379848",
+    "model": "supply_chain_workflow",
+    "object": "chat.completion.chunk"
+  },
+
+  {
+    "id": "2c784f87-b2d2-4700-93a2-8cd0cbebb4fc",
+    "choices": [
+      {
+        "message": {
+          "content": "[Query execution completed]",
+          "role": null
+        },
+        "finish_reason": null,
+        "index": 0,
+        "workflow_status": "in_progress",
+        "step": "Query execution completed",
+        "data": {
+          "dataframe_records": [
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            },
+            {
+              "nvpn": "316-1089-000",
+              "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+              "lt_weeks": 365.0,
+              "mfr": "MPS",
+              "cm_site_name": "BYD"
+            }
+          ],
+          "success": true,
+          "limited_to": -1,
+          "truncated": false
+        }
+      }
+    ],
+    "created": "2025-08-12T14:59:40.940873",
+    "model": "supply_chain_workflow",
+    "object": "chat.completion.chunk"
+  },
+
+  {
+    "id": "2c784f87-b2d2-4700-93a2-8cd0cbebb4fc",
+    "choices": [
+      {
+        "message": {
+          "content": "Show me all parts from the MPS manufacturer that have a lead time longer than 200 weeks.",
+          "role": null
+        },
+        "finish_reason": "stop",
+        "index": 0,
+        "workflow_status": "completed",
+        "execution_metadata": {
+          "original_query": "Show me all parts from the MPS manufacturer that have a lead time longer than 200 weeks.",
+          "final_query": "Show me all parts from the MPS manufacturer that have a lead time longer than 200 weeks.",
+          "execution_plan": {
+            "complexity": "moderate",
+            "entities_referenced": {
+              "Manufacturer": {
+                "matched_text": "MPS manufacturer",
+                "match_type": "alias",
+                "field_name": "mfr"
+              },
+              "NVIDIA Part Number": {
+                "matched_text": "parts",
+                "match_type": "alias",
+                "field_name": "nvpn"
+              }
+            },
+            "data_sources_needed": ["databricks_odp"],
+            "reasoning": "The query mentions 'MPS manufacturer' which matches the 'Manufacturer' entity's alias 'supplier' with a typo variation. 'parts' is matched to 'NVIDIA Part Number' through its alias 'part'. The lead time is assumed to be a field in the Manufacturer or NVIDIA Part Number entity, but since it's not explicitly listed, we rely on the available data sources to infer the join. The complexity is moderate due to the need to join multiple entities and filter based on a condition.",
+            "steps": [
+              "entity_check",
+              "data_source_selector",
+              "query_refiner",
+              "text2sql",
+              "execute_db_query"
+            ],
+            "parallel_steps": []
+          },
+          "selected_data_source": "databricks_odp",
+          "entity_validation": {
+            "valid": ["Manufacturer", "NVIDIA Part Number"],
+            "inferred": {}
+          },
+          "generated_sql": "SELECT nvpn, description, lt_weeks, mfr, cm_site_name FROM pbrs_shortage WHERE mfr = 'MPS' AND lt_weeks > 200",
+          "query_results": {
+            "dataframe_records": [
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              },
+              {
+                "nvpn": "316-1089-000",
+                "description": "VREG CONTROLLER/DRIVER/FET AUTOMOTIVE QFN20_C Buck 1Ph 1MHz 0.815V 42.75V 1% % MPQ4316GRE-AEC1",
+                "lt_weeks": 365.0,
+                "mfr": "MPS",
+                "cm_site_name": "BYD"
+              }
+            ],
+            "success": true,
+            "limited_to": -1,
+            "truncated": false
+          },
+          "completed_steps": [
+            "entity_check",
+            "data_source_selector",
+            "query_refiner",
+            "text2sql",
+            "execute_db_query"
+          ],
+          "error": null
+        }
+      }
+    ],
+    "created": "2025-08-12T14:59:41.041420",
+    "model": "supply_chain_workflow",
+    "object": "chat.completion.chunk"
+  }
+]
