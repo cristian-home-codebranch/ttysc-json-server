@@ -9,28 +9,46 @@
       "name": "Supply Chain Optimization",
       "description": "Comprehensive analysis of supply chain processes, bottlenecks, and optimization opportunities.",
       "category": "Supply Chain",
-      "tags": ["logistics", "optimization", "efficiency"]
+      "tags": [
+        "logistics",
+        "optimization",
+        "efficiency"
+      ]
     },
     {
       "id": "2",
       "name": "Market Demand Forecast",
       "description": "Statistical and AI-driven forecasting of market demand patterns for strategic planning.",
       "category": "Market Analysis",
-      "tags": ["forecasting", "demand", "market trends"]
+      "tags": [
+        "forecasting",
+        "demand",
+        "market trends"
+      ]
     },
     {
       "id": "3",
       "name": "Risk Assessment Matrix",
       "description": "Quantitative and qualitative risk analysis framework for business decision making.",
       "category": "Risk Management",
-      "tags": ["risk", "assessment", "mitigation", "compliance"]
+      "tags": [
+        "risk",
+        "assessment",
+        "mitigation",
+        "compliance"
+      ]
     },
     {
       "id": "4",
       "name": "Financial Impact Analysis",
       "description": "Analysis of financial implications and ROI for strategic initiatives.",
       "category": "Finance",
-      "tags": ["finance", "ROI", "impact", "profitability"]
+      "tags": [
+        "finance",
+        "ROI",
+        "impact",
+        "profitability"
+      ]
     }
   ],
   "feedback": [
@@ -64,6 +82,21 @@
       "uuid": "1f07462a-011e-6631-b36f-001198cde1dd",
       "chartExampleId": "demand-allocation-trend",
       "createdAt": "2024-12-01T15:00:00Z"
+    },
+    {
+      "uuid": "1f0794a4-a8c3-69d0-9c03-1fbc7f8443d8",
+      "chartExampleId": "production-efficiency-trend",
+      "createdAt": "2025-08-14T22:38:44.049Z"
+    },
+    {
+      "uuid": "1f079e2c-d603-6711-aef8-f0435b8b67bb",
+      "chartExampleId": "quality-control-metrics",
+      "createdAt": "2025-08-15T14:19:06.392Z"
+    },
+    {
+      "uuid": "1f079f7e-a851-6a81-84ac-f931d82b9b6b",
+      "chartExampleId": "supplier-performance-metrics",
+      "createdAt": "2025-08-15T16:50:14.711Z"
     }
   ],
   "options": {
@@ -115,7 +148,13 @@
         "name": "financial_metrics",
         "displayName": "Financial Metrics",
         "description": "Financial performance and profitability data",
-        "columns": ["period", "revenue", "costs", "profit_margin", "roi"],
+        "columns": [
+          "period",
+          "revenue",
+          "costs",
+          "profit_margin",
+          "roi"
+        ],
         "recordCount": 960
       }
     ],
@@ -369,6 +408,436 @@
           "created": "2025-07-24T03:00:49.285Z"
         }
       ]
+    },
+    {
+      "id": "1f0795f7-c828-6d30-9399-6d51fae4813f",
+      "userId": "user123",
+      "sessionId": "session_1f0795f7-c82b-6440-9308-1a8d9d2f3126",
+      "created": "2025-08-14T22:39:06.628Z",
+      "title": "Analysis 94",
+      "messages": []
+    },
+    {
+      "id": "1f0795f7-c848-6900-8dd7-329a3d32bcbc",
+      "userId": "user123",
+      "sessionId": "session_1f0795f7-c848-6901-9f2f-e516850e46d0",
+      "created": "2025-08-14T22:39:06.640Z",
+      "title": "Analysis 94",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f079d8e-6b51-67d0-ae00-d440c9e5b150",
+      "userId": "user123",
+      "sessionId": "session_1f079d8e-6b53-6ee0-bb7c-f4e0df070a15",
+      "created": "2025-08-15T13:08:13.902Z",
+      "title": "Analysis 95",
+      "messages": []
+    },
+    {
+      "id": "1f079d8e-6b60-6230-bd09-bbc0e559fe88",
+      "userId": "user123",
+      "sessionId": "session_1f079d8e-6b60-6231-8a38-4eb23d4132f5",
+      "created": "2025-08-15T13:08:13.907Z",
+      "title": "Analysis 95",
+      "messages": [
+        {
+          "id": "1f079e2c-d603-6710-94f8-21049edc2738",
+          "role": "user",
+          "content": "hola",
+          "created": "2025-08-15T14:19:06.369Z"
+        },
+        {
+          "id": "1f079e2c-d603-6712-95e3-e6dd2494cca9",
+          "role": "assistant",
+          "title": "Response from bot",
+          "content": "# Talk to Your Supply Chain — Demo Markdown\n\n> Scenario: “Why did **On-Time In-Full (OTIF)** drop in **LATAM** last week, and what should we do before the holiday surge?”\n\n## Goals\n- Explain the OTIF dip with clear evidence (suppliers, lanes, SKUs).\n- Recommend fast, low-risk mitigations.\n- Produce a shareable summary for Ops & Finance.\n\n## Filters (Action Filters)\n- **Date range:** 2025-07-15 → 2025-08-12  \n- **Region:** LATAM  \n- **SKU family:** Compute Nodes (A100/H100)  \n- **Carrier:** All  \n- **Warehouse:** Bogotá DC-01\n\n## Executive KPIs (Today vs 7-day)\n| Metric                 | Today | 7-day Avg | WoW   | Target | Status |\n|------------------------|------:|----------:|:-----:|------:|:------:|\n| **OTIF**               | 88.4% | 91.1%     |  ↓    | ≥95%  | ⚠️     |\n| **Fill Rate**          | 96.2% | 97.0%     |  ↓    | ≥98%  | ⚠️     |\n| **Lead Time (avg)**    | 9.8d  | 9.1d      |  ↑    | ≤8d   | ⚠️     |\n| **Backorders (units)** | 312   | 250       |  ↑    |  0    | 🔺     |\n\n## Where the drop happened\n- **Lane:** GDL → BOG shows **+2.1d** transit delay (port congestion spillover).\n- **Supplier:** Foxtron-MX short on **power rails** for H100 trays (**−3,200 pcs**).\n- **SKU impact:** H100 trays > A100 add-on kits (priority skew).\n\n## Top Stockouts (rolling 7 days)\n| SKU                 | DC     | Units | Lost Rev. (USD) |\n|---------------------|--------|------:|----------------:|\n| H100-TRAY-PWR-KIT   | BOG-01 |   120 |        864,000  |\n| A100-RAILS-SET      | BOG-01 |   210 |        231,000  |\n| H100-CABLE-PCIE     | LIM-02 |    80 |         72,000  |\n\n## Risks & Alerts\n- ⚠️ **Supplier constraint** on power rails persists 2–3 weeks.\n- 🚢 **Ocean dwell** +0.8d (TEUs for GDL origin).\n- 🧊 **Cold start** carriers on BOG last-mile underperforming (SLA breach 6%).\n\n## Recommendation (Prioritized)\n1. **Expedite critical rails** (partial air-freight; limit to H100 trays; cost cap ≤ $12k).  \n2. **Rebalance inventory** from LIM-02 → BOG-01 (transfer window 48–72h).  \n3. **Temporary carrier swap** for BOG last-mile lanes with SLA bonus/malus.  \n4. **Issue supplier PO split** (weekly cadence; smaller lots) until constraint clears.\n\n## Streaming sample (what the app displays progressively)\n\n**Request (JSON)**\n```json\n{\n  \"query\": \"Explain the OTIF drop in LATAM and propose mitigations.\",\n  \"filters\": {\n    \"date_from\": \"2025-07-15\",\n    \"date_to\": \"2025-08-12\",\n    \"region\": \"LATAM\",\n    \"sku_family\": \"Compute Nodes\"\n  },\n  \"request_id\": \"8f9a7b9e-6c2a-4b4a-9a1b-5a0c7c8b12a4\"\n}\n```\n\n**SSE/NDJSON Chunk (example)**\n```json\n{ \"type\": \"delta\", \"content\": \"OTIF fell to \", \"request_id\": \"8f9a7...\" }\n```\n```json\n{ \"type\": \"delta\", \"content\": \"88.4% due to supplier constraints \", \"request_id\": \"8f9a7...\" }\n```\n```json\n{ \"type\": \"complete\", \"tokens\": 412, \"elapsed_ms\": 3180, \"request_id\": \"8f9a7...\" }\n```\n\n## Quick Visual\n![LATAM lane map (placeholder)](https://placehold.co/820x260?text=LATAM+Lanes+%26+Delays)\n\n## Action Checklist\n- [x] Validate filters (date range + region).\n- [x] Confirm supplier shortage on rails with Foxtron-MX.\n- [ ] Approve partial air-freight budget.\n- [ ] Execute DC transfer LIM-02 → BOG-01.\n- [ ] Monitor OTIF daily for 2 weeks.\n\n## Notes\n- External links: [Next.js](https://nextjs.org) · [NVIDIA Developer](https://developer.nvidia.com)  \n- Data sources used: WMS, TMS, Supplier ASN feeds, Port dwell API.  \n- If OTIF stays **<90%** for 3 consecutive days, escalate to **Tier-1 incident**.\n\n\n\n[SHOW_CHART:1f079e2c-d603-6711-aef8-f0435b8b67bb]",
+          "created": "2025-08-15T14:19:06.369Z"
+        }
+      ],
+      "draft": ""
+    },
+    {
+      "id": "1f079e37-d6b0-6c70-8f3c-86f72d014a52",
+      "userId": "user123",
+      "sessionId": "session_1f079e37-d6b0-6c71-94a3-11896399791b",
+      "created": "2025-08-15T14:24:01.719Z",
+      "title": "Analysis 96",
+      "messages": [
+        {
+          "id": "1f079e37-f56d-66e0-8f94-ca9966b5d8cd",
+          "role": "user",
+          "content": "tesy",
+          "created": "2025-08-15T14:24:04.942Z"
+        },
+        {
+          "id": "1f079e37-f56d-66e2-b09a-66fdbda35d9c",
+          "role": "assistant",
+          "title": "Response from bot",
+          "content": "LATAM OTIF dropped to 88.4% due to supplier constraints and lane delays. Actions: 1) Air-freight rails (cap ≤ $12k), 2) Rebalance LIM-02 → BOG-01, 3) Temporary carrier swap. Monitor OTIF daily; escalate if <90% for 3 days.",
+          "created": "2025-08-15T14:24:04.942Z"
+        },
+        {
+          "id": "1f079e38-1299-6b10-92d4-79e10c8e3ec0",
+          "role": "user",
+          "content": "markdown",
+          "created": "2025-08-15T14:24:08.001Z"
+        },
+        {
+          "id": "1f079e38-1299-6b12-82f2-488c45400734",
+          "role": "assistant",
+          "title": "Response from bot",
+          "content": "LATAM OTIF dropped to 88.4% due to supplier constraints and lane delays. Actions: 1) Air-freight rails (cap ≤ $12k), 2) Rebalance LIM-02 → BOG-01, 3) Temporary carrier swap. Monitor OTIF daily; escalate if <90% for 3 days.\n\n## Talk to Your Supply Chain — Demo Markdown\n\nScenario: \"Why did **On-Time In-Full (OTIF)** drop in **LATAM** last week, and what should we do before the holiday surge?\"\n\n### Goals\n- Explain the OTIF dip with clear evidence (suppliers, lanes, SKUs).\n- Recommend fast, low-risk mitigations.\n- Produce a shareable summary for Ops & Finance.\n\n### Filters (Action Filters)\n- **Date range:** 2025-07-15 → 2025-08-12  \n- **Region:** LATAM  \n- **SKU family:** Compute Nodes (A100/H100)  \n- **Carrier:** All  \n- **Warehouse:** Bogotá DC-01\n\n### Executive KPIs (Today vs 7-day)\n| Metric                 | Today | 7-day Avg | WoW   | Target | Status |\n|------------------------|------:|----------:|:-----:|------:|:------:|\n| **OTIF**               | 88.4% | 91.1%     |  ↓    | ≥95%  | ⚠️     |\n| **Fill Rate**          | 96.2% | 97.0%     |  ↓    | ≥98%  | ⚠️     |\n| **Lead Time (avg)**    | 9.8d  | 9.1d      |  ↑    | ≤8d   | ⚠️     |\n| **Backorders (units)** | 312   | 250       |  ↑    |  0    | 🔺     |\n\n### Where the drop happened\n- **Lane:** GDL → BOG shows **+2.1d** transit delay (port congestion spillover).\n- **Supplier:** Foxtron-MX short on **power rails** for H100 trays (**−3,200 pcs**).\n- **SKU impact:** H100 trays > A100 add-on kits (priority skew).\n\n### Top Stockouts (rolling 7 days)\n| SKU                 | DC     | Units | Lost Rev. (USD) |\n|---------------------|--------|------:|----------------:|\n| H100-TRAY-PWR-KIT   | BOG-01 |   120 |        864,000  |\n| A100-RAILS-SET      | BOG-01 |   210 |        231,000  |\n| H100-CABLE-PCIE     | LIM-02 |    80 |         72,000  |\n\n### Risks & Alerts\n- ⚠️ **Supplier constraint** on power rails persists 2–3 weeks.\n- 🚢 **Ocean dwell** +0.8d (TEUs for GDL origin).\n- 🧊 **Cold start** carriers on BOG last-mile underperforming (SLA breach 6%).\n\n### Recommendation (Prioritized)\n1. **Expedite critical rails** (partial air-freight; limit to H100 trays; cost cap ≤ $12k).  \n2. **Rebalance inventory** from LIM-02 → BOG-01 (transfer window 48–72h).  \n3. **Temporary carrier swap** for BOG last-mile lanes with SLA bonus/malus.  \n4. **Issue supplier PO split** (weekly cadence; smaller lots) until constraint clears.\n\n### Streaming sample (what the app displays progressively)\n\n**Request (JSON)**\n```json\n{\n  \"query\": \"Explain the OTIF drop in LATAM and propose mitigations.\",\n  \"filters\": {\n    \"date_from\": \"2025-07-15\",\n    \"date_to\": \"2025-08-12\",\n    \"region\": \"LATAM\",\n    \"sku_family\": \"Compute Nodes\"\n  },\n  \"request_id\": \"8f9a7b9e-6c2a-4b4a-9a1b-5a0c7c8b12a4\"\n}\n```\n\n**SSE/NDJSON Chunk (example)**\n```json\n{ \"type\": \"delta\", \"content\": \"OTIF fell to \", \"request_id\": \"8f9a7...\" }\n{ \"type\": \"delta\", \"content\": \"88.4% due to supplier constraints \", \"request_id\": \"8f9a7...\" }\n{ \"type\": \"complete\", \"tokens\": 412, \"elapsed_ms\": 3180, \"request_id\": \"8f9a7...\" }\n```\n\n### Quick Visual\n![LATAM lane map (placeholder)](https://placehold.co/820x260?text=LATAM+Lanes+%26+Delays)\n\n### Action Checklist\n- [x] Validate filters (date range + region).\n- [x] Confirm supplier shortage on rails with Foxtron-MX.\n- [ ] Approve partial air-freight budget.\n- [ ] Execute DC transfer LIM-02 → BOG-01.\n- [ ] Monitor OTIF daily for 2 weeks.\n\n### Notes\n- External links: [Next.js](https://nextjs.org) · [NVIDIA Developer](https://developer.nvidia.com)  \n- Data sources used: WMS, TMS, Supplier ASN feeds, Port dwell API.  \n- If OTIF stays **<90%** for 3 consecutive days, escalate to **Tier-1 incident**.\n\n",
+          "created": "2025-08-15T14:24:08.001Z"
+        },
+        {
+          "id": "1f079e3e-4d49-6700-8b41-d09779301c25",
+          "role": "user",
+          "content": "markdown",
+          "created": "2025-08-15T14:26:55.216Z"
+        },
+        {
+          "id": "1f079e3e-4d49-6702-9718-55d537ecba18",
+          "role": "assistant",
+          "title": "Response from bot",
+          "content": "LATAM OTIF dropped to 88.4% due to supplier constraints and lane delays. Actions: 1) Air-freight rails (cap ≤ $12k), 2) Rebalance LIM-02 → BOG-01, 3) Temporary carrier swap. Monitor OTIF daily; escalate if <90% for 3 days.\n\n## Talk to Your Supply Chain — Demo Markdown\n\nScenario: \"Why did **On-Time In-Full (OTIF)** drop in **LATAM** last week, and what should we do before the holiday surge?\"\n\n### Goals\n- Explain the OTIF dip with clear evidence (suppliers, lanes, SKUs).\n- Recommend fast, low-risk mitigations.\n- Produce a shareable summary for Ops & Finance.\n\n### Filters (Action Filters)\n- **Date range:** 2025-07-15 → 2025-08-12  \n- **Region:** LATAM  \n- **SKU family:** Compute Nodes (A100/H100)  \n- **Carrier:** All  \n- **Warehouse:** Bogotá DC-01\n\n### Executive KPIs (Today vs 7-day)\n| Metric                 | Today | 7-day Avg | WoW   | Target | Status |\n|------------------------|------:|----------:|:-----:|------:|:------:|\n| **OTIF**               | 88.4% | 91.1%     |  ↓    | ≥95%  | ⚠️     |\n| **Fill Rate**          | 96.2% | 97.0%     |  ↓    | ≥98%  | ⚠️     |\n| **Lead Time (avg)**    | 9.8d  | 9.1d      |  ↑    | ≤8d   | ⚠️     |\n| **Backorders (units)** | 312   | 250       |  ↑    |  0    | 🔺     |\n\n### Where the drop happened\n- **Lane:** GDL → BOG shows **+2.1d** transit delay (port congestion spillover).\n- **Supplier:** Foxtron-MX short on **power rails** for H100 trays (**−3,200 pcs**).\n- **SKU impact:** H100 trays > A100 add-on kits (priority skew).\n\n### Top Stockouts (rolling 7 days)\n| SKU                 | DC     | Units | Lost Rev. (USD) |\n|---------------------|--------|------:|----------------:|\n| H100-TRAY-PWR-KIT   | BOG-01 |   120 |        864,000  |\n| A100-RAILS-SET      | BOG-01 |   210 |        231,000  |\n| H100-CABLE-PCIE     | LIM-02 |    80 |         72,000  |\n\n### Risks & Alerts\n- ⚠️ **Supplier constraint** on power rails persists 2–3 weeks.\n- 🚢 **Ocean dwell** +0.8d (TEUs for GDL origin).\n- 🧊 **Cold start** carriers on BOG last-mile underperforming (SLA breach 6%).\n\n### Recommendation (Prioritized)\n1. **Expedite critical rails** (partial air-freight; limit to H100 trays; cost cap ≤ $12k).  \n2. **Rebalance inventory** from LIM-02 → BOG-01 (transfer window 48–72h).  \n3. **Temporary carrier swap** for BOG last-mile lanes with SLA bonus/malus.  \n4. **Issue supplier PO split** (weekly cadence; smaller lots) until constraint clears.\n\n### Streaming sample (what the app displays progressively)\n\n**Request (JSON)**\n```json\n{\n  \"query\": \"Explain the OTIF drop in LATAM and propose mitigations.\",\n  \"filters\": {\n    \"date_from\": \"2025-07-15\",\n    \"date_to\": \"2025-08-12\",\n    \"region\": \"LATAM\",\n    \"sku_family\": \"Compute Nodes\"\n  },\n  \"request_id\": \"8f9a7b9e-6c2a-4b4a-9a1b-5a0c7c8b12a4\"\n}\n```\n\n**SSE/NDJSON Chunk (example)**\n```json\n{ \"type\": \"delta\", \"content\": \"OTIF fell to \", \"request_id\": \"8f9a7...\" }\n{ \"type\": \"delta\", \"content\": \"88.4% due to supplier constraints \", \"request_id\": \"8f9a7...\" }\n{ \"type\": \"complete\", \"tokens\": 412, \"elapsed_ms\": 3180, \"request_id\": \"8f9a7...\" }\n```\n\n### Quick Visual\n![LATAM lane map (placeholder)](https://placehold.co/820x260?text=LATAM+Lanes+%26+Delays)\n\n### Action Checklist\n- [x] Validate filters (date range + region).\n- [x] Confirm supplier shortage on rails with Foxtron-MX.\n- [ ] Approve partial air-freight budget.\n- [ ] Execute DC transfer LIM-02 → BOG-01.\n- [ ] Monitor OTIF daily for 2 weeks.\n\n### Notes\n- External links: [Next.js](https://nextjs.org) · [NVIDIA Developer](https://developer.nvidia.com)  \n- Data sources used: WMS, TMS, Supplier ASN feeds, Port dwell API.  \n- If OTIF stays **<90%** for 3 consecutive days, escalate to **Tier-1 incident**.\n\n",
+          "created": "2025-08-15T14:26:55.216Z"
+        }
+      ],
+      "draft": ""
+    },
+    {
+      "id": "1f079f05-fc82-66f0-b828-dd8f87c3213b",
+      "userId": "user123",
+      "sessionId": "session_1f079f05-fc84-6e00-b7fe-36d55f6b7176",
+      "created": "2025-08-15T15:56:15.456Z",
+      "title": "Analysis 105",
+      "messages": []
+    },
+    {
+      "id": "1f079f05-fc8e-6a40-be09-c82c9e8e73a6",
+      "userId": "user123",
+      "sessionId": "session_1f079f05-fc8e-6a41-92b2-972b97ad8368",
+      "created": "2025-08-15T15:56:15.460Z",
+      "title": "Analysis 105",
+      "messages": []
+    },
+    {
+      "id": "1f079f0a-f0de-6240-b02f-64d6ca5c14c0",
+      "userId": "user123",
+      "sessionId": "session_1f079f0a-f0de-6241-9aa4-8a447fa175b1",
+      "created": "2025-08-15T15:58:28.452Z",
+      "title": "Analysis 106",
+      "messages": []
+    },
+    {
+      "id": "1f079f0a-f0ea-6590-8c5d-37d28f2c14ea",
+      "userId": "user123",
+      "sessionId": "session_1f079f0a-f0ea-6591-acd7-e738fbf150f0",
+      "created": "2025-08-15T15:58:28.457Z",
+      "title": "Analysis 106",
+      "messages": [
+        {
+          "id": "1f079f70-1b90-60f0-8843-a440130d131b",
+          "role": "user",
+          "content": "table",
+          "created": "2025-08-15T16:43:44.127Z"
+        },
+        {
+          "id": "1f079f70-1b90-60f2-9ea9-80f58761c321",
+          "role": "assistant",
+          "title": "Response from bot",
+          "content": "LATAM OTIF dropped to 88.4% due to supplier constraints and lane delays. Actions: 1) Air-freight rails (cap ≤ $12k), 2) Rebalance LIM-02 → BOG-01, 3) Temporary carrier swap. Monitor OTIF daily; escalate if <90% for 3 days.\n\n[SHOW_TABLE]",
+          "created": "2025-08-15T16:43:44.127Z"
+        },
+        {
+          "id": "1f079f7e-a851-6a80-a26e-335408d59727",
+          "role": "user",
+          "content": "chart",
+          "created": "2025-08-15T16:50:14.696Z"
+        },
+        {
+          "id": "1f079f7e-a851-6a82-a223-6482f1ca60a2",
+          "role": "assistant",
+          "title": "Response from bot",
+          "content": "LATAM OTIF dropped to 88.4% due to supplier constraints and lane delays. Actions: 1) Air-freight rails (cap ≤ $12k), 2) Rebalance LIM-02 → BOG-01, 3) Temporary carrier swap. Monitor OTIF daily; escalate if <90% for 3 days.\n\n[SHOW_CHART:1f079f7e-a851-6a81-84ac-f931d82b9b6b]",
+          "created": "2025-08-15T16:50:14.696Z"
+        }
+      ],
+      "draft": ""
+    },
+    {
+      "id": "1f07de4f-cf1d-6cd0-88a2-9c508d89e0d3",
+      "userId": "user123",
+      "sessionId": "session_1f07de4f-cf1d-6cd1-98d5-19f6ebc93359",
+      "created": "2025-08-20T16:44:49.821Z",
+      "title": "Mi nuevo chat",
+      "messages": []
+    },
+    {
+      "id": "1f07deea-4a8a-66d0-90cb-c2f546132df7",
+      "userId": "user123",
+      "sessionId": "session_1f07deea-4a8c-6de0-95d7-940b984acea8",
+      "created": "2025-08-20T17:53:56.670Z",
+      "title": "Analysis 172",
+      "messages": []
+    },
+    {
+      "id": "1f07deea-4a9d-6f50-8708-4f8aed3f3de7",
+      "userId": "user123",
+      "sessionId": "session_1f07deea-4aa0-6660-8a84-70b40fc765ef",
+      "created": "2025-08-20T17:53:56.678Z",
+      "title": "Analysis 172",
+      "messages": []
+    },
+    {
+      "id": "1f07deeb-1ce6-6f70-a344-64dd96ba4a2a",
+      "userId": "user123",
+      "sessionId": "session_1f07deeb-1ce6-6f71-928e-82596c04a07e",
+      "created": "2025-08-20T17:54:18.727Z",
+      "title": "Analysis 177",
+      "messages": []
+    },
+    {
+      "id": "1f07def4-9552-6d20-9f52-0eb7c367e280",
+      "userId": "user123",
+      "sessionId": "session_1f07def4-9552-6d21-8169-90502669666f",
+      "created": "2025-08-20T17:58:32.946Z",
+      "title": "Analysis 193",
+      "messages": []
+    },
+    {
+      "id": "1f07df0f-ba45-67c0-992d-a9ee06183a9e",
+      "userId": "user123",
+      "sessionId": "session_1f07df0f-ba47-6ed0-b256-61854bd6725f",
+      "created": "2025-08-20T18:10:41.597Z",
+      "title": "Analysis 2",
+      "messages": []
+    },
+    {
+      "id": "1f07df0f-ba87-6670-a9e3-e3a5ab3ce80a",
+      "userId": "user123",
+      "sessionId": "session_1f07df0f-ba87-6671-a2c3-a88884c93be9",
+      "created": "2025-08-20T18:10:41.623Z",
+      "title": "Analysis 212",
+      "messages": []
+    },
+    {
+      "id": "1f07df12-70f9-6b90-bac0-b8435a26a3c9",
+      "userId": "user123",
+      "sessionId": "session_1f07df12-70f9-6b91-b34e-725c5c8b804d",
+      "created": "2025-08-20T18:11:54.441Z",
+      "title": "Analysis 213",
+      "messages": []
+    },
+    {
+      "id": "1f07df12-712c-6fe0-849a-4033493edd44",
+      "userId": "user123",
+      "sessionId": "session_1f07df12-712f-66f0-b47c-12b291278a5c",
+      "created": "2025-08-20T18:11:54.463Z",
+      "title": "Analysis 213",
+      "messages": []
+    },
+    {
+      "id": "1f07df12-9e04-67c0-86a3-75bc9bc877e4",
+      "userId": "user123",
+      "sessionId": "session_1f07df12-9e04-67c1-915b-6e97857e5289",
+      "created": "2025-08-20T18:11:59.164Z",
+      "title": "Analysis 214",
+      "messages": [],
+      "draft": "",
+      "metadata": {
+        "analysis": {
+          "name": "Supply Chain Optimization",
+          "key": "SCO-2024"
+        },
+        "organizations": {
+          "key": null,
+          "name": "All"
+        },
+        "CM": {
+          "key": null,
+          "name": "All"
+        },
+        "SKU": {
+          "key": null,
+          "name": "All"
+        },
+        "NVPN": {
+          "key": null,
+          "name": "All"
+        }
+      }
+    },
+    {
+      "id": "1f07df6d-db85-6f80-bd4f-88d44b446d48",
+      "userId": "user123",
+      "sessionId": "session_1f07df6d-db85-6f81-b177-3669ea8d655a",
+      "created": "2025-08-20T18:52:48.376Z",
+      "title": "Analysis 215",
+      "messages": [],
+      "metadata": {
+        "analysis": {
+          "name": "Market Penetration Analysis",
+          "key": "MPA-2024"
+        },
+        "organizations": {
+          "name": "NVIDIA Corporation",
+          "key": "org1"
+        },
+        "CM": {
+          "name": "Market Analytics Center",
+          "key": "cm4"
+        },
+        "SKU": {
+          "name": "RTX-4090-24GB",
+          "key": "sku1"
+        },
+        "NVPN": {
+          "name": "900-2G414-0000-000",
+          "key": "nvpn1"
+        }
+      },
+      "draft": ""
+    },
+    {
+      "id": "1f07dfdc-e964-6d80-b94c-0cd03073bc51",
+      "userId": "user123",
+      "sessionId": "session_1f07dfdc-e964-6d81-be54-5a6d7e624e6e",
+      "created": "2025-08-20T19:42:29.464Z",
+      "title": "Analysis 216",
+      "messages": []
+    },
+    {
+      "id": "1f07dfdc-e97f-6b30-a69b-21d7ee9ddf20",
+      "userId": "user123",
+      "sessionId": "session_1f07dfdc-e97f-6b31-9b94-20c5c2f62ef1",
+      "created": "2025-08-20T19:42:29.475Z",
+      "title": "Analysis 216",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f07e002-031c-6dc0-93b1-5aecb13ecf10",
+      "userId": "user123",
+      "sessionId": "session_1f07e002-031c-6dc1-84cb-5ac1367fbfb3",
+      "created": "2025-08-20T19:59:05.372Z",
+      "title": "Analysis 217",
+      "messages": []
+    },
+    {
+      "id": "1f07e002-0372-64f0-ac80-dd1813962ab3",
+      "userId": "user123",
+      "sessionId": "session_1f07e002-0372-64f1-9a8a-0bd2918b232c",
+      "created": "2025-08-20T19:59:05.407Z",
+      "title": "Analysis 217",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f07e08a-3b6c-6df0-9feb-3e030c2cc495",
+      "userId": "user123",
+      "sessionId": "session_1f07e08a-3b6c-6df1-8881-145cac69d042",
+      "created": "2025-08-20T21:00:01.999Z",
+      "title": "Analysis 218",
+      "messages": []
+    },
+    {
+      "id": "1f07e08a-3d2e-6170-9d1d-6c98aa101414",
+      "userId": "user123",
+      "sessionId": "session_1f07e08a-3d2e-6171-bec4-e7b806fcc0df",
+      "created": "2025-08-20T21:00:02.183Z",
+      "title": "Analysis 218",
+      "messages": []
+    },
+    {
+      "id": "1f07e15c-6895-6f70-b3ed-a848268c2303",
+      "userId": "user123",
+      "sessionId": "session_1f07e15c-6895-6f71-81c3-8943eec60808",
+      "created": "2025-08-20T22:34:03.879Z",
+      "title": "Analysis 219",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f07e177-34c4-6050-9a30-86dec6b6c74c",
+      "userId": "user123",
+      "sessionId": "session_1f07e177-34c4-6051-a015-7983b6868191",
+      "created": "2025-08-20T22:46:03.221Z",
+      "title": "Analysis 220",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f07e183-2146-6e40-b483-7b6ee7e99ef6",
+      "userId": "user123",
+      "sessionId": "session_1f07e183-2146-6e41-88a2-935b57ac74ee",
+      "created": "2025-08-20T22:51:23.300Z",
+      "title": "Analysis 221",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f07e189-319e-6cb0-aa42-d33339ad92c9",
+      "userId": "user123",
+      "sessionId": "session_1f07e189-319e-6cb1-95b1-13186263e2d7",
+      "created": "2025-08-20T22:54:06.075Z",
+      "title": "Analysis 222",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f07e1cf-e879-6d90-a07c-ad2d20fffc24",
+      "userId": "user123",
+      "sessionId": "session_1f07e1cf-e879-6d91-87eb-2f304b3b2f66",
+      "created": "2025-08-20T23:25:44.297Z",
+      "title": "Analysis 223",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f07e1f2-7486-6ff0-af1c-9d0d81dcb61b",
+      "userId": "user123",
+      "sessionId": "session_1f07e1f2-7486-6ff1-9309-9425e4f4eb0d",
+      "created": "2025-08-20T23:41:11.663Z",
+      "title": "Analysis 224",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f07e1f3-653c-6170-9938-701faa2592f0",
+      "userId": "user123",
+      "sessionId": "session_1f07e1f3-653c-6171-9d5c-c26552879a3c",
+      "created": "2025-08-20T23:41:36.903Z",
+      "title": "Analysis 225",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f07e222-eaaf-68f0-8c71-37796b1cf714",
+      "userId": "user123",
+      "sessionId": "session_1f07e222-eaaf-68f1-9809-6ec4fd7faa36",
+      "created": "2025-08-21T00:02:52.543Z",
+      "title": "Analysis 226",
+      "messages": []
+    },
+    {
+      "id": "1f07e222-eae7-6b60-905d-9b4918208374",
+      "userId": "user123",
+      "sessionId": "session_1f07e222-eae7-6b61-81c4-0af736c320c6",
+      "created": "2025-08-21T00:02:52.566Z",
+      "title": "Analysis 226",
+      "messages": [],
+      "draft": ""
+    },
+    {
+      "id": "1f07eba1-3225-67c0-91e3-ad35053d841c",
+      "userId": "user123",
+      "sessionId": "session_1f07eba1-3225-67c1-addd-d5b1f53e98ae",
+      "created": "2025-08-21T18:10:09.852Z",
+      "title": "Analysis 279",
+      "messages": [],
+      "draft": ""
     }
   ],
   "chat": [
@@ -443,12 +912,24 @@
       "chartData": {
         "type": "bar",
         "data": {
-          "labels": ["Supplier A", "Supplier B", "Supplier C"],
+          "labels": [
+            "Supplier A",
+            "Supplier B",
+            "Supplier C"
+          ],
           "datasets": [
             {
               "label": "Lead Time (days)",
-              "data": [14, 21, 16],
-              "backgroundColor": ["#36A2EB", "#FF6384", "#FFCE56"]
+              "data": [
+                14,
+                21,
+                16
+              ],
+              "backgroundColor": [
+                "#36A2EB",
+                "#FF6384",
+                "#FFCE56"
+              ]
             }
           ]
         },
