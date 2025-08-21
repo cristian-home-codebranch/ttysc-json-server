@@ -374,6 +374,39 @@
             "limited_to": -1,
             "truncated": false
           },
+          "chart_type": "BarChart",
+          "chart_label": "Lead Time Analysis by CM",
+          "generated_chart": {
+            "Series": [
+              {
+                "name": "Lead Time",
+                "data": [
+                  { "x": "FXG", "y": 154.0 },
+                  { "x": "FXHC", "y": 140.0 },
+                  { "x": "FXLH", "y": 140.0 },
+                  { "x": "FXM_NBU", "y": 60.0 },
+                  { "x": "FXSJ", "y": 147.0 },
+                  { "x": "FXVN_NBU", "y": 140.0 },
+                  { "x": "WIN2", "y": 181.0 },
+                  { "x": "WIST", "y": 181.0 }
+                ]
+              }
+            ],
+            "XAxisKey": "cm_site_name",
+            "YAxisKey": "component_lt"
+          },
+          "chartgen_error": null,
+          "followup_questions": [
+            "What is the latest material cost by CM for NVPN 316-0899-000?",
+            "Show me the latest lead time by CM for NVPN 316-0899-000?",
+            "Show items with lead time > 150?",
+            "What are the top 10 items with longest lead time for NVPN 316-0899-000?"
+          ],
+          "followup_metadata": {
+            "original_question": "Can you display the most recent lead time values by CM for NVPN 316-0899-000?",
+            "num_questions": 4
+          },
+          "followup_error": null,
           "completed_steps": [
             "entity_check",
             "data_source_selector",
