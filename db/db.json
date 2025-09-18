@@ -51,32 +51,6 @@
       ]
     }
   ],
-  "feedback": [
-    {
-      "id": "1",
-      "userId": "user123",
-      "message": "The supply chain analysis feature is very helpful, but could use more granular filtering options.",
-      "timestamp": "2024-01-15T14:30:00Z",
-      "status": "open",
-      "category": "feature_request"
-    },
-    {
-      "id": "2",
-      "userId": "user456",
-      "message": "Great tool overall! The AI analysis is very accurate and saves a lot of time.",
-      "timestamp": "2024-01-16T09:15:00Z",
-      "status": "acknowledged",
-      "category": "positive"
-    },
-    {
-      "id": "3",
-      "userId": "user789",
-      "message": "Having issues with the chat streaming functionality on large datasets.",
-      "timestamp": "2024-01-17T16:45:00Z",
-      "status": "in_progress",
-      "category": "bug_report"
-    }
-  ],
   "chartMappings": [
     {
       "uuid": "1f07462a-011e-6631-b36f-001198cde1dd",
@@ -947,5 +921,7 @@
         }
       }
     }
-  }
+  },
+  "feedback": [],
+  "usermetrics": []
 }
